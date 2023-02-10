@@ -1,0 +1,61 @@
+.pos {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: $primaryColor;
+  overflow: hidden;
+  .products {
+    width: 65%;
+    padding: 20px 20px;
+    overflow: scroll;
+    height: 100vh;
+    -ms-overflow-style: none;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .nav {
+      position: absolute;
+      top: 20px;
+      left: 30%;
+      // background-color: rgba(25, 22, 41, 0.519);
+      width: 50%;
+      .input_box {
+        width: 70%;
+        // min-width: 50%;
+        input {
+          height: 100%;
+          width: 100%;
+          border-radius: 5px;
+          border: solid;
+          background: #252d34d8;
+          color: #fff;
+          font-weight: 400;
+          font-size: 1.6rem;
+          padding: 15px 12px;
+          /* margin: 10px 0; */
+        }
+      }
+    }
+    .list {
+      padding-top: 60px;
+    }
+    li {
+      background-color: #fff;
+      display: flex;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      padding: 15px 20px;
+      margin: 10px;
+      span {
+        padding: 0 10px;
+      }
+    }
+  }
+  .cart {
+    width: 35%;
+    color: #fff;
+    li {
+      color: #fff;
+    }
+  }
+}

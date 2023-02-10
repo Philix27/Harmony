@@ -1,0 +1,79 @@
+.dashboard {
+  display: grid;
+  padding-left: 22vw;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding-top: 80px;
+  padding-right: 50px;
+  padding-bottom: 40px;
+  @include tabletSS {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 80px 20px;
+  }
+  @include mobileSS {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 80px 20px;
+  }
+
+  .repad {
+    padding-top: 0px;
+  }
+  .card {
+    // min-height: 100px;
+    height: 150px;
+    background-color: #fff;
+    display: flex;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: block;
+    .addAgent {
+      height: 100%;
+      background-color: rgb(6, 161, 161);
+      color: #fff;
+      border-radius: 10px;
+    }
+    .topbar {
+      height: 15px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      //   background-color: rgb(157, 8, 8);
+    }
+    .content {
+      padding: 20px;
+    }
+    .btnDiv {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .btn {
+      // background-color: #0b5775;
+      background-color: #1663b0;
+      width: 35%;
+    }
+
+    .btn:hover {
+      background-color: #022044;
+    }
+
+    .red {
+      background-color: rgb(157, 8, 8);
+    }
+    .green {
+      background-color: green;
+    }
+    .orange {
+      background-color: orange;
+    }
+    .teal {
+      background-color: rgb(4, 122, 169);
+    }
+    .purple {
+      background-color: rgb(125, 4, 169);
+    }
+    .blood {
+      background-color: rgb(213, 62, 8);
+    }
+  }
+}

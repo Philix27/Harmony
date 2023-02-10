@@ -1,0 +1,34 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(9, 106, 163, 0.391),
+      rgba(2, 4, 14, 0.358)
+    ),
+    url(../public/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .textArea {
+    background-color: rgba(0, 0, 0, 0.598);
+    margin: 0 auto;
+    padding: 40px 40px;
+    color: #fff;
+    max-width: 35vw;
+    p {
+      padding: 15px 0;
+      line-height: 2.3rem;
+      font-weight: 400;
+    }
+  }
+  .comp {
+    padding-left: 20vw;
+    @include mobileSS {
+      padding-left: 0;
+    }
+  }
+}

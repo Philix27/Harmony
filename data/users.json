@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Collins",
+    "password": "collins22",
+    "status": "CASHIER"
+  },
+  {
+    "id": 2,
+    "name": "James Clear",
+    "password": "collins22",
+    "status": "CASHIER"
+  },
+  {
+    "id": 3,
+    "name": "Donald Trump",
+    "password": "collins22",
+    "status": "CASHIER"
+  },
+  {
+    "id": 4,
+    "name": "Collins",
+    "password": "collins22",
+    "status": "CASHIER"
+  },
+  {
+    "id": 5,
+    "name": "Huston Jake",
+    "password": "collins22",
+    "status": "CASHIER"
+  },
+  {
+    "id": 6,
+    "name": "Homo Sapiens",
+    "password": "collins22",
+    "status": "CASHIER"
+  },
+  {
+    "id": 7,
+    "name": "Adams Grant",
+    "password": "collins22",
+    "status": "CASHIER"
+  },
+  {
+    "id": 8,
+    "name": "Yauri Noah",
+    "password": "collins22",
+    "status": "CASHIER"
+  }
+]
