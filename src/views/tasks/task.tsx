@@ -2,14 +2,13 @@ import React from "react";
 import products from "../../../data/products.json";
 import { AiFillDelete } from "react-icons/ai";
 import styles from "./tasks.module.scss";
+import NavBar from "../../comps/navbar/navbar.comp";
 
 export default function TasksSection({ activeIndex }) {
-  const onDelete = (agent) => {};
   return (
-    <div className={activeIndex == 8 ? styles.tasks : "none"}>
-      <div className={styles.products}>
+    <>
+      <div className={activeIndex == 8 ? styles.tasks : "none"}>
         <h2>All Tasks</h2>
-
         <div className={styles.tableSection}>
           <table>
             <thead>
@@ -39,6 +38,6 @@ export default function TasksSection({ activeIndex }) {
           </table>
         </div>
       </div>
-    </div>
+    </>
   );
 }

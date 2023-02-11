@@ -3,19 +3,13 @@
 @import "variables";
 @import "mixins";
 @import "screensize";
-@import "dashboard";
 @import "layouts";
 @import "typos";
 @import "table";
 @import "buttons";
 @import "markdown";
-@import "home";
 @import "modal";
 @import "form";
-@import "wrappers";
-@import "pos";
-@import "cart";
-@import "admin";
 @import "table";
 @import "users";
 
@@ -44,4 +38,5 @@ body {
 .container {
   display: flex;
   flex-direction: row;
+  // max-height: 100vh;
 }

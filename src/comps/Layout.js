@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import Navbar from "./Navbar";
-import Sidebar from "./sidebar/Sidebar";
+import NavBar from "./navbar/navbar.comp";
 
 export default function Layout(props) {
   const [activeIndex, setactiveIndex] = useState(0);
@@ -13,6 +12,7 @@ export default function Layout(props) {
         {/* <link rel="icon" href="/images/logo.png" /> */}
       </Head>
       {/* <Sidebar /> */}
+      {/* <NavBar /> */}
       {props.children}
     </>
   );

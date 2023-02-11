@@ -1,26 +1,22 @@
 import React from "react";
 import Sidebar from "../comps/sidebar/Sidebar";
-import Home from "../comps/Home";
-import POSSection from "../comps/pos";
-import AdminSection from "../comps/admin";
-import UsersSection from "../comps/users";
-import ProductsSection from "../comps/products";
+import Home from "../views/home/home";
 import TasksSection from "../views/tasks/task";
-
-const styles = {
-  display: "flex",
-  flexDirection: "row",
-};
+import ProjectsSection from "../views/projects/projects";
+import ChatSection from "../views/chat/chat";
+import NavBar from "../comps/navbar/navbar.comp";
 
 export default function Index({ activeIndex, setActiveIndex }) {
   return (
     <div className="container">
+      <NavBar />
       <Sidebar setActiveIndex={setActiveIndex} activeIndex={activeIndex} />
       <Home activeIndex={activeIndex} />
-      <POSSection activeIndex={activeIndex} />
-      <AdminSection activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
-      <UsersSection activeIndex={activeIndex} />
-      <ProductsSection activeIndex={activeIndex} />
+      <ChatSection activeIndex={activeIndex} />
+      <ProjectsSection
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+      />
       <TasksSection activeIndex={activeIndex} />
     </div>
   );

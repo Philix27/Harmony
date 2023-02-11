@@ -1,0 +1,48 @@
+@import "../../styles/screensize";
+@import "../../styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: $primaryColor;
+  // background-color: antiquewhite;
+  overflow: hidden;
+  // height: 80vh;
+  .products {
+    border-right: 1px solid $secondaryColor;
+    background-color: $secondaryColor;
+    width: 20%;
+    height: 100%;
+    max-width: 250px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .topbar {
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      line-height: 50px;
+      align-items: center;
+      svg {
+        color: #fff;
+        font-size: 2.5rem;
+      }
+    }
+    .list {
+      padding-top: 50px;
+    }
+    li {
+      background-color: #fff;
+      border-bottom: $secondaryColor 1px solid;
+      padding: 10px 20px;
+      &:hover {
+        background-color: $secondaryColor;
+        color: #fff;
+      }
+    }
+  }
+}
