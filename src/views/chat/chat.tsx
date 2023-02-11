@@ -2,8 +2,9 @@ import React from "react";
 import { MdGroups } from "react-icons/md";
 import { IoMdPersonAdd } from "react-icons/io";
 import products from "../../../data/products.json";
-import Conversation from "./conversation";
 import styles from "./chat.view.module.scss";
+import MsgSection from "../../comps/msgs/msgSection";
+import TimeAgo from "timeago-react";
 
 export default function ChatSection({ activeIndex }) {
   return (
@@ -18,8 +19,15 @@ export default function ChatSection({ activeIndex }) {
             {products.map((product, index) => {
               return (
                 <li key={index}>
-                  <div>
-                    <p>{product.name}</p>
+                  <div className={styles.contents}>
+                    <div className={styles.nameImage}>
+                      <img src="./images/profile.jpeg" alt="profile" />
+                      <p>{product.name}</p>
+                    </div>
+
+                    <div className={styles.time}>
+                      <TimeAgo live={true} datetime="1676079706801" />
+                    </div>
                   </div>
                 </li>
               );
@@ -27,7 +35,7 @@ export default function ChatSection({ activeIndex }) {
           </ul>
         </div>
       </div>
-      <Conversation />
+      <MsgSection roomId={"writably"} />
     </div>
   );
 }
