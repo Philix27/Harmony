@@ -5,13 +5,14 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  background-color: $primaryColor;
+  // background-color: $primaryColor;
   overflow: hidden;
   scroll-behavior: auto;
-
+  height: 100vh;
+  // height: calc(100vh - 0px);
   .products {
     border-right: 1px solid $secondaryColor;
-    background-color: $secondaryColor;
+    // background-color: #455322;
     width: 30%;
     height: 100%;
     max-width: 250px;

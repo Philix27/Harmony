@@ -43,7 +43,8 @@
     .othersChatBubble {
       margin: 10px;
       padding: 10px;
-      background-color: #fff;
+      background-color: $primaryLight;
+      color: #fff;
       border-radius: 10px 5px 5px 0px;
       max-width: 45%;
       .title {
@@ -61,8 +62,9 @@
     padding: 0px 10px;
     width: 50%;
     margin: 0 auto;
-    // position: fixed;
-    // bottom: 0px;
+    position: fixed;
+    bottom: 0px;
+    right: 20%;
     background-color: #fff;
     display: grid;
     grid-template-columns: 75% 20%;
@@ -83,7 +85,8 @@
       box-sizing: border-box;
       width: 100%;
       font-size: medium;
-      background-color: $background1;
+      background-color: $primaryColor;
+      color: #fff;
     }
     input[type="button"] {
       margin: 0 10px;
