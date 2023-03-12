@@ -1,0 +1,29 @@
+.lightTheme {
+  --backgroundColor1: #2d613d;
+  --backgroundColor2: #2d613d;
+  --secondaryColor: #373c3f;
+  --primaryLight: #64707c;
+  --primaryColor: #035c0f;
+  --fontColor: #292d32;
+  --bigFontColor: #404346;
+}
+
+.darkTheme {
+  --backgroundColor1: #373c3f;
+  --backgroundColor2: #18242b;
+  --secondaryColor: #373c3f;
+  --primaryLight: #64707c;
+  --primaryColor: #252d34;
+  --fontColor: #292d32;
+  --bigFontColor: #404346;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--backgroundColor1);
+  // max-height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+}

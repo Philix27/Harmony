@@ -90,17 +90,33 @@ export default function Sidebar({ activeIndex, setActiveIndex }) {
           <Link
             className={styles.link}
             href="#"
-            onClick={() => setActiveIndex(4)}
+            onClick={() => setActiveIndex(9)}
           >
             <li
               className={
-                activeIndex == 4
+                activeIndex == 9
                   ? styles.activeItem
                   : styles.sidebar_start_list_item
               }
             >
               <MdAdminPanelSettings />
               <p>ACTIVITIES</p>
+            </li>
+          </Link>
+          <Link
+            className={styles.link}
+            href="#"
+            onClick={() => setActiveIndex(10)}
+          >
+            <li
+              className={
+                activeIndex == 10
+                  ? styles.activeItem
+                  : styles.sidebar_start_list_item
+              }
+            >
+              <MdAdminPanelSettings />
+              <p>SETTINGS</p>
             </li>
           </Link>
         </ul>

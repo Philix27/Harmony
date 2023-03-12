@@ -5,6 +5,7 @@ import React, { useState } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [activeIndex, setActiveIndex] = useState(1);
+
   return (
     <Layout>
       <Component

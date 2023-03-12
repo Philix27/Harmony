@@ -21,14 +21,14 @@
 }
 
 .sidebar {
-  height: calc(100vh - 55px);
-  background-color: $primaryColor;
+  height: calc(100vh - 50px);
+  background-color: var(--backgroundColor2);
   display: flex;
   width: 5%;
   align-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
-  border-right: 1px $secondaryColor solid;
+  border-right: 1px var(--backgroundColor2) solid;
   margin-top: 50px;
   @include mobileSS {
     display: none;
@@ -62,8 +62,8 @@
     }
   }
   .activeItem {
-    background-color: $background1;
-    color: $primaryColor;
+    background-color: var(--backgroundColor1);
+    color: var(--fontColor);
     @include sideIcons;
   }
 
@@ -72,7 +72,7 @@
     padding: 20px 20px;
     margin-bottom: 20px;
     display: block;
-    border-bottom: $secondaryColor solid 1px;
+    border-bottom: var(--backgroundColor2) solid 1px;
     span {
       // padding-left: 8px;
       padding-right: 15px;

@@ -1,0 +1,40 @@
+@import "../../styles/screensize";
+@import "../../styles/variables";
+
+.container {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--backgroundColor1);
+  .section {
+    background-color: var(--backgroundColor2);
+    width: 100%;
+    color: #fff;
+    margin: 5px 5px;
+    padding: 10px;
+    border-radius: 10px;
+    .goal {
+      background-color: var(--backgroundColor1);
+      margin-bottom: 10px;
+      padding: 10px 10px;
+      border-radius: 5px;
+      &:hover {
+        background-color: var(--backgroundColor2);
+      }
+      .title {
+        display: flex;
+        justify-content: space-between;
+      }
+      .info {
+        display: flex;
+        justify-content: space-between;
+        p {
+          padding-top: 10px;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

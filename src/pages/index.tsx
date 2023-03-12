@@ -5,10 +5,13 @@ import TasksSection from "../views/tasks/task";
 import ProjectsSection from "../views/projects/projects";
 import ChatSection from "../views/chat/chat";
 import NavBar from "../comps/navbar/navbar.comp";
+import GoalsView from "../views/goals/goals";
+import SettingsView from "../views/settings/settings";
+import styles from "../styles/home.module.scss";
 
 export default function Index({ activeIndex, setActiveIndex }) {
   return (
-    <div className="container">
+    <div className={styles.container}>
       <NavBar />
       <Sidebar setActiveIndex={setActiveIndex} activeIndex={activeIndex} />
       <Home activeIndex={activeIndex} />
@@ -18,6 +21,8 @@ export default function Index({ activeIndex, setActiveIndex }) {
         setActiveIndex={setActiveIndex}
       />
       <TasksSection activeIndex={activeIndex} />
+      <GoalsView activeIndex={activeIndex} />
+      <SettingsView activeIndex={activeIndex} />
     </div>
   );
 }

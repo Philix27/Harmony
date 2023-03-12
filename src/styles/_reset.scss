@@ -1,5 +1,9 @@
 @import "variables";
 
+:root {
+  --fontFamily: "Roboto", sans-serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,9 +18,7 @@ body {
   margin: 0;
   font-family: $fontFamily;
   font-size: 1.6rem;
-  background: $background1;
   color: $fontColor;
-  // cursor: default;
 }
 
 h1,
@@ -35,4 +37,8 @@ a {
 }
 li {
   list-style: none;
+}
+
+.none {
+  display: none;
 }
