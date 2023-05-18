@@ -35,7 +35,7 @@ export default function ChatSection({ activeIndex }) {
           </ul>
         </div>
       </div>
-      <MsgSection roomId={"writably"} />
+      <MsgSection roomId={"KOLAB"} />
     </div>
   );
 }

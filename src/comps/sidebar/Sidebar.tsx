@@ -1,124 +1,22 @@
-import React from "react";
-import { useRouter } from "next/router";
-import { RiHome5Fill } from "react-icons/ri";
-import { MdAdminPanelSettings } from "react-icons/md";
-import { HiViewGridAdd } from "react-icons/hi";
-import { BsChatFill } from "react-icons/bs";
 import styles from "./sidebar.module.scss";
-import Link from "next/link";
+import { ActiveUser, LinkItem } from "./linkItem";
 
-export default function Sidebar({ activeIndex, setActiveIndex }) {
-  const router = useRouter();
-  const _path = router.pathname;
-
+export default function Sidebar(
+  isOrg,
+  setIsOrg: React.Dispatch<React.SetStateAction<ActiveUser>>
+) {
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebar_start}>
         <ul className={styles.sidebar_start_list}>
-          {/* <li className={styles.brandName}>
-              <span>
-                <RiHome5Fill />
-              </span>
-              BRAND
-            </li> */}
-
-          <Link
-            className={styles.link}
-            href="#"
-            onClick={() => setActiveIndex(1)}
-          >
-            <li
-              className={
-                activeIndex == 1
-                  ? styles.activeItem
-                  : styles.sidebar_start_list_item
-              }
-            >
-              <RiHome5Fill />
-              <p>HOME</p>
-            </li>
-          </Link>
-          <Link
-            className={styles.link}
-            href="#"
-            onClick={() => setActiveIndex(2)}
-          >
-            <li
-              className={
-                activeIndex == 2
-                  ? styles.activeItem
-                  : styles.sidebar_start_list_item
-              }
-            >
-              <BsChatFill />
-              <p>CHAT</p>
-            </li>
-          </Link>
-
-          <Link
-            className={styles.link}
-            href="#"
-            onClick={() => setActiveIndex(3)}
-          >
-            <li
-              className={
-                activeIndex == 3
-                  ? styles.activeItem
-                  : styles.sidebar_start_list_item
-              }
-            >
-              <HiViewGridAdd />
-              <p>PROJECTS</p>
-            </li>
-          </Link>
-          <Link
-            className={styles.link}
-            href="#"
-            onClick={() => setActiveIndex(8)}
-          >
-            <li
-              className={
-                activeIndex == 8
-                  ? styles.activeItem
-                  : styles.sidebar_start_list_item
-              }
-            >
-              <MdAdminPanelSettings />
-              <p>GOALS</p>
-            </li>
-          </Link>
-          <Link
-            className={styles.link}
-            href="#"
-            onClick={() => setActiveIndex(9)}
-          >
-            <li
-              className={
-                activeIndex == 9
-                  ? styles.activeItem
-                  : styles.sidebar_start_list_item
-              }
-            >
-              <MdAdminPanelSettings />
-              <p>ACTIVITIES</p>
-            </li>
-          </Link>
-          <Link
-            className={styles.link}
-            href="#"
-            onClick={() => setActiveIndex(10)}
-          >
-            <li
-              className={
-                activeIndex == 10
-                  ? styles.activeItem
-                  : styles.sidebar_start_list_item
-              }
-            >
-              <MdAdminPanelSettings />
-              <p>SETTINGS</p>
-            </li>
-          </Link>
+          {LinkItem("ME", setIsOrg, isOrg === ActiveUser.ME, ActiveUser.ME)}
+          {LinkItem("DOOW", setIsOrg, isOrg === ActiveUser.ORG, ActiveUser.ORG)}
+          {LinkItem(
+            "KOLAB",
+            setIsOrg,
+            isOrg === ActiveUser.KOLAB,
+            ActiveUser.KOLAB
+          )}
         </ul>
       </div>
     </div>

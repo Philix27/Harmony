@@ -1,0 +1,121 @@
+@import "../../styles/screensize";
+@import "../../styles/variables";
+
+@mixin sideIcons {
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  // background-color: antiquewhite;
+  display: flex;
+  // justify-content: space-between;
+  // font-size: 50px;
+  align-items: center;
+  // justify-content: center;
+  svg {
+    font-size: x-small;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 2px;
+    padding-right: 20px;
+  }
+  p {
+    padding-left: 20px;
+    font-size: x-small;
+  }
+}
+
+.sidebar {
+  height: calc(100vh - 50px);
+  background-color: var(--backgroundColor3);
+  display: flex;
+  width: 20%;
+  align-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px var(--backgroundColor2) solid;
+  margin-top: 50px;
+  @include mobileSS {
+    display: none;
+  }
+  @include tabletSS {
+    display: none;
+  }
+  .sidebar_start {
+    align-items: center;
+    display: block;
+    width: 100%;
+  }
+  .sidebar_end {
+    align-items: center;
+    color: #fff;
+  }
+  .sidebar_start_list {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    white-space: nowrap;
+    a {
+      padding-top: 10px;
+    }
+  }
+
+  .sidebar_start_list_item {
+    @include sideIcons;
+    :hover {
+      background-color: #fff;
+    }
+  }
+  .activeItem {
+    // background-color: var(--backgroundColor1);
+    color: var(--fontColor);
+    font-weight: 800;
+    @include sideIcons;
+  }
+
+  .sidebar_end {
+    color: #fff;
+  }
+
+  .sidebar_end_list {
+    display: flex;
+  }
+
+  .check {
+    display: none;
+    position: absolute;
+  }
+
+  .logo {
+    margin-left: 10px;
+  }
+
+  .link {
+    color: #fff;
+    :hover {
+      background-color: $secondaryColor;
+    }
+  }
+
+  .bars,
+  .bars_close {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .img {
+    display: none;
+  }
+
+  .sidebar_end {
+    display: none;
+  }
+}

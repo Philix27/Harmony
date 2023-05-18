@@ -4,8 +4,6 @@ import NavBar from "./navbar/navbar.comp";
 import useLocalStorage from "use-local-storage";
 
 export default function Layout(props) {
-  const [activeIndex, setactiveIndex] = useState(0);
-  // const [theme, setTheme] = useLocalStorage("theme", "");
   var themeer: string;
   useEffect(() => {
     var themeer = localStorage.getItem("theme");
@@ -14,12 +12,10 @@ export default function Layout(props) {
   return (
     <div className={themeer === "theme" ? "darkTheme" : "lightTheme"}>
       <Head>
-        <title>PIMS </title>
-        <meta name="PIMS" content="Created by Eligbue" />
-        {/* <link rel="icon" href="/images/logo.png" /> */}
+        <title>Kolab </title>
+        <meta name="Kolab" content="Created by Eligbue" />
       </Head>
-      {/* <Sidebar /> */}
-      {/* <NavBar /> */}
+
       {props.children}
     </div>
   );

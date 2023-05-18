@@ -20,7 +20,7 @@ export default function ProjectsSection({ activeIndex, setActiveIndex }) {
           <h3>SITUATION ROOM</h3>
         </div>
         <div className={styles.card}>
-          <h3>WRITABLY</h3>
+          <h3>KOLAB</h3>
         </div>
       </div>
     </div>
