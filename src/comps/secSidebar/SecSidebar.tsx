@@ -15,7 +15,7 @@ export default function SecSidebar({ activeIndex, setActiveIndex }) {
     <div className={styles.sidebar}>
       <div className={styles.sidebar_start}>
         <ul className={styles.sidebar_start_list}>
-          <Link
+          {/* <Link
             className={styles.link}
             href="#"
             onClick={() => setActiveIndex(1)}
@@ -30,7 +30,7 @@ export default function SecSidebar({ activeIndex, setActiveIndex }) {
               <RiHome5Fill />
               <p>HOME</p>
             </li>
-          </Link>
+          </Link> */}
           <Link
             className={styles.link}
             href="#"
@@ -48,7 +48,7 @@ export default function SecSidebar({ activeIndex, setActiveIndex }) {
             </li>
           </Link>
 
-          <Link
+          {/* <Link
             className={styles.link}
             href="#"
             onClick={() => setActiveIndex(3)}
@@ -63,7 +63,7 @@ export default function SecSidebar({ activeIndex, setActiveIndex }) {
               <HiViewGridAdd />
               <p>PROJECTS</p>
             </li>
-          </Link>
+          </Link> */}
           <Link
             className={styles.link}
             href="#"

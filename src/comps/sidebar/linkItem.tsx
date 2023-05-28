@@ -6,7 +6,8 @@ export function LinkItem(
   title: string,
   setIsOrg: any,
   isActive: boolean,
-  userState: ActiveUser
+  userState: ActiveUser,
+  icon: JSX.Element,
 ) {
   return (
     <Link className={styles.link} href="#" onClick={() => setIsOrg(userState)}>
@@ -15,8 +16,7 @@ export function LinkItem(
           isActive ? styles.activeItem : styles.sidebar_start_list_item
         }
       >
-        <MdAdminPanelSettings />
-        <p>{title}</p>
+        {icon}
       </li>
     </Link>
   );

@@ -2,11 +2,22 @@ import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.scss";
 import { FaTimes, FaBars } from "react-icons/fa";
+import { ACTIVE_TAB } from "../../utils/redux/tabs/state";
+import { useSelector, useDispatch } from "react-redux";
+import { changeTab } from "../../utils/redux/tabs/slice";
+import { current } from "@reduxjs/toolkit";
 
 export default function NavBar() {
+  const dispatch = useDispatch();
+  // changeTab(ACTIVE_TAB.HOME);
+  // const currentTab = useSelector((state: ACTIVE_TAB) => state.tabs.activeTab);
+
+  // console.log(currentTab, "currentTab");
+  //  const count = useSelector((state) => state.counter.count);
+
   const show = "show";
-  const [showNav, setShowNav] = useState(false);
-  // console.log("Path -", _path);
+  // const [showNav, setShowNav] = useState(ACTIVE_TAB.HOME);
+
   return (
     <>
       <div className={styles.navbar}>
@@ -15,27 +26,14 @@ export default function NavBar() {
             KOLAB
           </Link>
         </label>
-
-        <form>
-          <div className={styles.input_box}>
-            <input
-              type="text"
-              id="form-email"
-              placeholder="Search..."
-              name="text"
-            />
+        <div className={styles.tabs_container}>
+          <div className={styles.tab_box}>
+            <div className={`${styles.tab_name} ${styles.active}`}>Home</div>
+            <div className={styles.tab_name}>Chat</div>
+            <div className={styles.tab_name}>Task</div>
+            <div className={styles.tab_name}>Finance</div>
           </div>
-        </form>
-
-        <div></div>
-
-        <label className={styles.icon}>
-          {showNav ? (
-            <FaTimes onClick={() => setShowNav(!showNav)} />
-          ) : (
-            <FaBars onClick={() => setShowNav(!showNav)} />
-          )}
-        </label>
+        </div>
       </div>
     </>
   );

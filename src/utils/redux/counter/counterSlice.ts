@@ -5,7 +5,7 @@ const initialState = {
 };
 
 export const CounterSlice = createSlice({
-  name: "Counteer",
+  name: "Counter",
   initialState,
   reducers: {
     increment: (state) => {
