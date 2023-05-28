@@ -10,19 +10,19 @@ import SettingsView from "../views/settings/settings";
 import styles from "../styles/home.module.scss";
 import OrgSidebar from "../comps/secSidebar/OrgSidebar";
 import SecSidebar from "../comps/secSidebar/SecSidebar";
-import { ActiveUser } from "../comps/sidebar/linkItem";
+import { get_active_tab } from "../comps/sidebar/linkItem";
 
 export default function Index(a: {
   activeIndex: number;
   setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
 }) {
-  const [isOrg, setIsOrg] = useState(ActiveUser.ME);
+  // const [isOrg, setIsOrg] = useState(ActiveUser.ME);
 
   return (
     <div className={styles.container}>
       <NavBar />
-      <Sidebar setIsOrg={setIsOrg} isOrg={isOrg} />
-      {isOrg === ActiveUser.ORG ? (
+      <Sidebar />
+      {/* {isOrg === ActiveUser.ORG ? (
         <OrgSidebar
           setActiveIndex={a.setActiveIndex}
           activeIndex={a.activeIndex}
@@ -32,9 +32,9 @@ export default function Index(a: {
           setActiveIndex={a.setActiveIndex}
           activeIndex={a.activeIndex}
         />
-      )}
-
-      <Home activeIndex={a.activeIndex} />
+      )} */}
+      {get_active_tab("HARMONY")}
+      {/* <Home activeIndex={a.activeIndex} />
       <ChatSection activeIndex={a.activeIndex} />
       <ProjectsSection
         activeIndex={a.activeIndex}
@@ -42,7 +42,7 @@ export default function Index(a: {
       />
       <TasksSection activeIndex={a.activeIndex} />
       <GoalsView activeIndex={a.activeIndex} />
-      <SettingsView activeIndex={a.activeIndex} />
+      <SettingsView activeIndex={a.activeIndex} /> */}
     </div>
   );
 }

@@ -1,29 +1,82 @@
 import Link from "next/link";
-import { MdAdminPanelSettings } from "react-icons/md";
 import styles from "./sidebar.module.scss";
+import { HiHome } from "react-icons/hi";
+import { BsClipboard } from "react-icons/bs";
+import { MdNotes, MdSettings, MdShoppingBasket } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { selectTab } from "../../utils/redux/store";
+import { changeTab } from "../../utils/redux/tabs/tab_slice";
+import Home from "../../views/home/home";
+import ChatSection from "../../views/chat/chat";
+import TasksSection from "../../views/tasks/task";
+import GoalsView from "../../views/goals/goals";
+import SettingsView from "../../views/settings/settings";
+import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../utils/redux/hooks";
 
-export function LinkItem(
-  title: string,
-  setIsOrg: any,
-  isActive: boolean,
-  userState: ActiveUser,
-  icon: JSX.Element,
-) {
+export interface ILinkItem {
+  id?: number;
+  title: string;
+  icon: JSX.Element;
+  comp: JSX.Element;
+}
+
+export function LinkItem(data: ILinkItem) {
+  const activeTab = useAppSelector(selectTab);
+  const dispatch = useAppDispatch();
+
   return (
-    <Link className={styles.link} href="#" onClick={() => setIsOrg(userState)}>
+    <Link
+      key={data.id}
+      className={styles.link}
+      href="#"
+      onClick={() => {
+        dispatch(changeTab({ name: data.title }));
+        // setSelectedTab(activeTab.name);
+      }}
+    >
       <li
         className={
-          isActive ? styles.activeItem : styles.sidebar_start_list_item
+          activeTab.name === data.title
+            ? styles.activeItem
+            : styles.sidebar_start_list_item
         }
       >
-        {icon}
+        {data.icon}
       </li>
     </Link>
   );
 }
 
-export enum ActiveUser {
-  ORG,
-  ME,
-  KOLAB,
+export const ListOfLinkItems: Array<ILinkItem> = [
+  {
+    title: "HOME",
+    icon: <HiHome />,
+    comp: <Home />,
+    // comp: <div>Hello boys</div>,
+  },
+  {
+    title: "DOOW",
+    icon: <MdNotes />,
+    comp: <ChatSection />,
+  },
+  {
+    title: "HARMONY",
+    icon: <BsClipboard />,
+    comp: <TasksSection />,
+  },
+  {
+    title: "MARKET",
+    icon: <MdShoppingBasket />,
+    comp: <GoalsView />,
+  },
+  {
+    title: "SETTINGS",
+    icon: <MdSettings />,
+    comp: <SettingsView />,
+  },
+];
+
+export function get_active_tab(params: string): JSX.Element {
+  return ListOfLinkItems.filter((v) => v.title === params)[0].comp;
 }

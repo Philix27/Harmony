@@ -4,10 +4,10 @@ import { AiFillDelete } from "react-icons/ai";
 import styles from "./tasks.module.scss";
 import NavBar from "../../comps/navbar/navbar.comp";
 
-export default function TasksSection({ activeIndex }) {
+export default function TasksSection() {
   return (
     <>
-      <div className={activeIndex == 8 ? styles.tasks : "none"}>
+      <div className={styles.tasks}>
         <h2>All Tasks</h2>
         <div className={styles.tableSection}>
           <table>

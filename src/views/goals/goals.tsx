@@ -11,12 +11,9 @@ import {
   BsSlashCircle,
 } from "react-icons/bs";
 
-export default function GoalsView({ activeIndex }) {
+export default function GoalsView() {
   return (
-    <div
-      className={activeIndex == 9 ? styles.container : "none"}
-      data-theme="dark"
-    >
+    <div className={styles.container} data-theme="dark">
       <div className={styles.section}>
         <GoalItem
           title="Goals"

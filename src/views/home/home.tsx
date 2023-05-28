@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./home.module.scss";
 
-export default function Home({ activeIndex }) {
+export default function Home() {
   return (
-    <div className={activeIndex == 1 ? styles.home : "none"}>
+    <div className={styles.home}>
       <div className="buttons">
         <input
           type="submit"

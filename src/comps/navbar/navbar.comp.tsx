@@ -4,7 +4,7 @@ import styles from "./navbar.module.scss";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { ACTIVE_TAB } from "../../utils/redux/tabs/state";
 import { useSelector, useDispatch } from "react-redux";
-import { changeTab } from "../../utils/redux/tabs/slice";
+import { changeTab } from "../../utils/redux/tabs/tab_slice";
 import { current } from "@reduxjs/toolkit";
 
 export default function NavBar() {

@@ -5,7 +5,7 @@ import styles from "./settings.module.scss";
 import { BsCircleHalf } from "react-icons/bs";
 import useLocalStorage from "use-local-storage";
 
-export default function SettingsView({ activeIndex }) {
+export default function SettingsView() {
   const [theme, setTheme] = useLocalStorage("theme", "");
 
   const handleThemeSwitch = () => {
@@ -14,10 +14,7 @@ export default function SettingsView({ activeIndex }) {
   };
 
   return (
-    <div
-      className={activeIndex == 10 ? styles.container : "none"}
-      data-theme="dark"
-    >
+    <div className={styles.container} data-theme="dark">
       <div className={styles.itemList}>
         <div className={styles.item}>
           <div className={styles.title}>

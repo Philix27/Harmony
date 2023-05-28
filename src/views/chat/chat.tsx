@@ -6,9 +6,9 @@ import styles from "./chat.view.module.scss";
 import MsgSection from "../../comps/msgs/msgSection";
 import TimeAgo from "timeago-react";
 
-export default function ChatSection({ activeIndex }) {
+export default function ChatSection() {
   return (
-    <div className={activeIndex == 2 ? styles.container : "none"}>
+    <div className={styles.container}>
       <div className={styles.products}>
         <div className={styles.list}>
           <div className={styles.topbar}>
