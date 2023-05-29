@@ -2,3 +2,5 @@ cargo create-tauri-app
 
 npm run tauri dev
 npm run tauri dev
+
+yarn run tauri dev

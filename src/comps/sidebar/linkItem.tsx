@@ -2,8 +2,7 @@ import Link from "next/link";
 import styles from "./sidebar.module.scss";
 import { HiHome } from "react-icons/hi";
 import { BsClipboard } from "react-icons/bs";
-import { MdNotes, MdSettings, MdShoppingBasket } from "react-icons/md";
-import { useDispatch, useSelector } from "react-redux";
+import { MdNotes, MdSettings, MdShoppingBasket, MdWeb } from "react-icons/md";
 import { selectTab } from "../../utils/redux/store";
 import { changeTab } from "../../utils/redux/tabs/tab_slice";
 import Home from "../../views/home/home";
@@ -11,8 +10,8 @@ import ChatSection from "../../views/chat/chat";
 import TasksSection from "../../views/tasks/task";
 import GoalsView from "../../views/goals/goals";
 import SettingsView from "../../views/settings/settings";
-import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../utils/redux/hooks";
+import WebFrame from "../../views/web/web";
 
 export interface ILinkItem {
   id?: number;
@@ -32,7 +31,6 @@ export function LinkItem(data: ILinkItem) {
       href="#"
       onClick={() => {
         dispatch(changeTab({ name: data.title }));
-        // setSelectedTab(activeTab.name);
       }}
     >
       <li
@@ -74,6 +72,11 @@ export const ListOfLinkItems: Array<ILinkItem> = [
     title: "SETTINGS",
     icon: <MdSettings />,
     comp: <SettingsView />,
+  },
+  {
+    title: "WEB",
+    icon: <MdWeb />,
+    comp: <WebFrame />,
   },
 ];
 
