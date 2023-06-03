@@ -10,10 +10,9 @@ export default function WebFrame() {
         }}
         // src="https://www.doow.co"
         src="https://doc.rust-lang.org/stable/book/ch07-01-packages-and-crates.html"
+        // src="https://editor.graphite.rs/"
         name="myFrame"
-        sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-pointer-lock	 
-        
-        "
+        sandbox="allow-forms allow-modals allow-orientation-lock allow-popups allow-pointer-lock"
         className={styles.frame}
       ></iframe>
     </div>
