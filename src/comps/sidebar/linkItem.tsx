@@ -2,7 +2,13 @@ import Link from "next/link";
 import styles from "./sidebar.module.scss";
 import { HiHome } from "react-icons/hi";
 import { BsClipboard } from "react-icons/bs";
-import { MdNotes, MdSettings, MdShoppingBasket, MdWeb } from "react-icons/md";
+import {
+  MdDraw,
+  MdNotes,
+  MdSettings,
+  MdShoppingBasket,
+  MdWeb,
+} from "react-icons/md";
 import { selectTab } from "../../utils/redux/store";
 import { changeTab } from "../../utils/redux/tabs/tab_slice";
 import Home from "../../views/home/home";
@@ -12,6 +18,7 @@ import GoalsView from "../../views/goals/goals";
 import SettingsView from "../../views/settings/settings";
 import { useAppDispatch, useAppSelector } from "../../utils/redux/hooks";
 import WebFrame from "../../views/web/web";
+import CanvasFrame from "../../views/canvas/canvas";
 
 export interface ILinkItem {
   id?: number;
@@ -67,6 +74,11 @@ export const ListOfLinkItems: Array<ILinkItem> = [
     title: "MARKET",
     icon: <MdShoppingBasket />,
     comp: <GoalsView />,
+  },
+  {
+    title: "CANVAS",
+    icon: <MdDraw />,
+    comp: <CanvasFrame />,
   },
   {
     title: "SETTINGS",
