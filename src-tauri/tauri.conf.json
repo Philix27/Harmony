@@ -59,11 +59,12 @@
     },
     "windows": [
       {
-        "fullscreen": false,
+        "fullscreen": true,
         "height": 600,
         "resizable": true,
-        "title": "writably",
-        "width": 800
+        "title": "Harmony",
+        "width": 800,
+        "center": true
       }
     ]
   }

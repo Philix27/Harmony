@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./home.module.scss";
-import { Md30FpsSelect, MdExtension, MdGroup, MdNotes } from "react-icons/md";
-import { FaExternalLinkAlt, FaTasks } from "react-icons/fa";
-import { title } from "process";
-import { BsChat, BsChatFill, BsClipboard } from "react-icons/bs";
+import { MdExtension, MdGroup, MdNotes } from "react-icons/md";
+import { FaTasks } from "react-icons/fa";
+import { BsChatFill, BsClipboard } from "react-icons/bs";
+import { invoke } from "@tauri-apps/api";
 
 export default function Home() {
   return (
@@ -27,7 +27,15 @@ export default function Home() {
 
 function iconItem(title: string, icon: JSX.Element) {
   return (
-    <div>
+    <div
+      onClick={async () => {
+        await invoke("hello_world").then((res) => {
+          res as string;
+          console.log(res, "from tauri");
+        });
+        console.log("Yeah man");
+      }}
+    >
       {icon}
       <p>{title}</p>
     </div>
