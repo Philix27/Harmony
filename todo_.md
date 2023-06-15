@@ -1,22 +1,19 @@
-###  Todo
-  
-  
+### Todo
+
 - Add Custom icons for goals
 - Add tabs
-  
-###  Commit types
-  
-  
+
+### Commit types
+
 - chore
 - feat
 - fix:
 - merge
 - docs
 - refactor
-  
-###  Topics
-  
-  
+
+### Topics
+
 - Canvas api
 - className
 - Canvas games
@@ -32,5 +29,3 @@
 - rc-tooltip
 - react-move
 - web-vitals
-  
-  
