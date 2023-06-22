@@ -7,12 +7,9 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "reactstrap";
-
 //utils
+import { ContactTypes } from "../../../data";
 import { DivideByKeyResultTypes } from "../../../utils";
-
-// interfaaces
-import { ContactTypes } from "../../../data/contacts";
 
 interface ContactItemProps {
   contact: ContactTypes;

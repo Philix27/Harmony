@@ -1,29 +1,23 @@
 import React, { useEffect, useState } from "react";
 
-// hooks
-import { useRedux } from "../../../hooks/index";
-
-// components
-import Loader from "../../../components/Loader";
-import AppSimpleBar from "../../../components/AppSimpleBar";
-import InviteContactModal from "../../../components/InviteContactModal";
-import EmptyStateResult from "../../../components/EmptyStateResult";
 import ListHeader from "./ListHeader";
 import Contact from "./Contact";
 
-// actions
+//utils
+import AppSimpleBar from "../../../components/AppSimpleBar";
+import EmptyStateResult from "../../../components/EmptyStateResult";
+import InviteContactModal from "../../../components/InviteContactModal";
+import Loader from "../../../components/Loader";
 import {
   getContacts,
   inviteContact,
-  resetContacts,
   getChannelDetails,
   getChatUserDetails,
   getChatUserConversations,
-  changeSelectedChat,
-} from "../../../redux/actions";
-
-//utils
-import { divideByKey, DivideByKeyResultTypes } from "../../../utils";
+} from "../../../api";
+import { useRedux } from "../../../hooks";
+import { resetContacts, changeSelectedChat } from "../../../redux/actions";
+import { DivideByKeyResultTypes, divideByKey } from "../../../utils/arrayutils";
 
 interface IndexProps {}
 
@@ -32,7 +26,7 @@ const Index = (props: IndexProps) => {
   const { dispatch, useAppSelector } = useRedux();
 
   const { contactsList, getContactsLoading, isContactInvited } = useAppSelector(
-    state => ({
+    (state) => ({
       contactsList: state.Contacts.contacts,
       getContactsLoading: state.Contacts.getContactsLoading,
       isContactInvited: state.Contacts.isContactInvited,

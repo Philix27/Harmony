@@ -1,23 +1,14 @@
 import React, { useEffect, useState } from "react";
-
-// hooks
-import { useRedux } from "../../../hooks/index";
-
-// actions
-import {
-  getBookmarks,
-  deleteBookmark,
-  updateBookmark,
-} from "../../../redux/actions";
-
-// components
-import Loader from "../../../components/Loader";
+import BookMark from "./BookMark";
 import AppSimpleBar from "../../../components/AppSimpleBar";
 import LeftbarTitle from "../../../components/LeftbarTitle";
-import BookMark from "./BookMark";
+import Loader from "../../../components/Loader";
+import { BookMarkTypes } from "../../../data";
+import { getBookmarks, updateBookmark, deleteBookmark } from "../../../api";
+import { useRedux } from "../../../hooks";
 
 // interface
-import { BookMarkTypes } from "../../../data/bookmarks";
+// import { BookMarkTypes } from "../../../data/bookmarks";
 
 interface IndexProps {}
 const Index = (props: IndexProps) => {
@@ -29,7 +20,7 @@ const Index = (props: IndexProps) => {
     getBookmarksLoading,
     isBookmarkDeleted,
     isBookmarkUpdated,
-  } = useAppSelector(state => ({
+  } = useAppSelector((state) => ({
     bookmarksList: state.Bookmarks.bookmarks,
     getBookmarksLoading: state.Bookmarks.getBookmarksLoading,
     isBookmarkDeleted: state.Bookmarks.isBookmarkDeleted,

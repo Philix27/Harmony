@@ -1,18 +1,12 @@
-/*
-pages
-*/
-//root
-import Root from "../pages/Root/index";
-import Login from "../pages/Authentication/Login";
-import Logout from "../pages/Authentication/Logout";
-import Register from "../pages/Authentication/Register";
-import RecoverPassword from "../pages/Authentication/RecoverPassword";
-import ChangePassword from "../pages/Authentication/ChangePassword";
-import LockScreen from "../pages/Authentication/LockScreen";
-
-// dashboard
-import Dashboard from "../pages/Dashboard/index";
-import StarterPage from "../pages/StarterPage/index";
+import ChangePassword from "../views/Authentication/ChangePassword";
+import LockScreen from "../views/Authentication/LockScreen";
+import Login from "../views/Authentication/Login";
+import Logout from "../views/Authentication/Logout";
+import RecoverPassword from "../views/Authentication/RecoverPassword";
+import Register from "../views/Authentication/Register";
+import Dashboard from "../views/Dashboard";
+import Root from "../views/Root";
+import StarterPage from "../views/StarterPage";
 
 interface RouteProps {
   path: string;
@@ -32,7 +26,7 @@ const publicRoutes: Array<RouteProps> = [
 const privateRoutes: Array<RouteProps> = [
   { path: "/pages-starter", component: <StarterPage /> },
   { path: "/dashboard", component: <Dashboard /> },
-  { path: "/",  component: <Root /> },
+  { path: "/", component: <Root /> },
 ];
 
 export { publicRoutes, privateRoutes };
