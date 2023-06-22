@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+
+$black: #0d0d0d;
+$dark: #181820;
+$text: #5c636a;
+$gray: #21212b;
+$text-active: #e3e3e3;
+$closed-width: 5.5rem;
+
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html.light {
+  body {
+    background: #e6ebf4;
+  }
+  .sidebar {
+    background: #fefefe;
+  }
+  .logo,
+  .footer,
+  .footer a {
+    color: #bdbcb8;
+  }
+  .logo:hover {
+    color: $dark;
+  }
+  nav li a {
+    color: #bdbcb8;
+    &:hover {
+      color: $dark;
+    }
+  }
+  .footer {
+    .more:hover,
+    .icon:hover,
+    a:hover {
+      color: $dark;
+    }
+  }
+  ul li.withDivider {
+    border-top: 1px solid rgba(#000, 0.1);
+  }
+  .search input,
+  .footer {
+    background: #eef2f7;
+  }
+  .search {
+    color: #bdbcb8;
+    &:focus-within {
+      color: $dark;
+    }
+  }
+  nav li.active a {
+    background: #2984ff;
+    color: #fefefe;
+  }
+  nav {
+    color: #eef2f7;
+  }
+  .toggle {
+    background: #eef2f7;
+    color: #bdbcb8;
+    &:hover {
+      color: $dark;
+    }
+  }
+}
+body {
+  background: #434a5a;
+  transition: 1s background;
+}
+
+.sidebar {
+  background: $dark;
+  width: 20rem;
+  height: 100vh;
+  height: 100dvh;
+  color: $text;
+  transition: 0.3s width, 1s background;
+
+  .search {
+    color: rgba($text-active, 0.25);
+    input {
+      background: $black;
+      transition: 1s background;
+    }
+    &:focus-within {
+      color: $text-active;
+    }
+  }
+  nav {
+    overflow-y: overlay;
+    overflow-x: hidden;
+    color: $gray;
+    transition: 1s color;
+  }
+
+  ul {
+    li.active a {
+      color: $text-active;
+      background: $gray;
+    }
+    li.withDivider {
+      border-top: 1px solid rgba(#eee, 0.1);
+    }
+    .indicator {
+      animation: blink 1.5s infinite;
+    }
+    a:hover {
+      color: $text-active;
+    }
+    a span {
+      transition: 0.3s opacity;
+    }
+    li a {
+      color: $text;
+    }
+  }
+
+  .footer {
+    height: $closed-width;
+    background: $gray;
+    transition: 1s background;
+    a {
+      color: $text-active;
+      transition: 0.3s color;
+      &:hover {
+        color: $text;
+      }
+    }
+    .more:hover,
+    .icon:hover {
+      color: $text-active;
+    }
+  }
+  .toggle {
+    background: $black;
+    color: $text;
+    &:hover {
+      color: $text-active;
+    }
+  }
+
+  &.closed {
+    width: 5.5rem;
+    .toggle {
+      transform: rotate(180deg);
+    }
+    nav ul li a span {
+      opacity: 0;
+      width: 0;
+    }
+    .indicator {
+      transform: translate(-15px, -8px);
+    }
+    .footer .more {
+      opacity: 0;
+    }
+    .footer .briefcase {
+      opacity: 0;
+    }
+    ::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+  }
+}
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 16px;
+  border-radius: 8px;
+  background-clip: padding-box;
+  border: 6px solid transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 10px;
+}
+
+@keyframes blink {
+  0% {
+  }
+  50% {
+    background: transparent;
+  }
+  100% {
+  }
+}
+
+// dark light toggle by https://codepen.io/alireza82/pen/XWeabge
+
+.toggle-container {
+  width: 70px;
+  height: 30px;
+  background-color: #0d1117;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5px;
+  position: relative;
+  transition: background 0.5s;
+  overflow: hidden;
+  .icon {
+    svg {
+      stroke: #fff;
+      stroke-width: 1.5px;
+      width: 19px;
+    }
+  }
+  .toggle-dark-icon {
+    margin-left: 12px;
+    margin-top: 1px;
+    svg {
+      transition: transform 0.9s;
+      transform: translateX(0px);
+    }
+  }
+  .toggle-light-icon {
+    margin-top: 2px;
+    svg {
+      transform-origin: center;
+      transform: scale(0.7) rotate(0deg);
+      position: relative;
+      right: 30px;
+      transition: transform 0.9s, right 0.5s;
+    }
+  }
+  .toggle-circle {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    // opacity: .2;
+    left: 5%;
+    transition: left 0.5s;
+  }
+}
+
+#toggle-check {
+  display: none;
+  &:checked ~ .toggle-label .toggle-container {
+    background: #fd7e14;
+    .toggle-circle {
+      left: 62%;
+    }
+    .toggle-light-icon {
+      svg {
+        transform: scale(1) rotate(180deg);
+        right: 0px;
+      }
+    }
+    .toggle-dark-icon {
+      svg {
+        transform: translateX(30px);
+      }
+    }
+  }
+}

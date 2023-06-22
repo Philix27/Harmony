@@ -34,8 +34,7 @@
   .tabs_container {
     align-items: baseline;
     // height: 100%;
-    // background-color: aqua;
-    margin-top: 10px;
+    // margin-top: 10px;
     .tab_box {
       display: flex;
       .tab_name {
@@ -44,7 +43,7 @@
         background-color: $primaryColor;
         color: #fff;
         font-size: 13px;
-        border-radius: 8px 8px 0px 0;
+        // border-radius: 8px 8px 0px 0;
         margin: 0px 0.2px;
         line-height: 30px;
         &:hover {
@@ -52,7 +51,8 @@
         }
       }
       .active {
-        background-color: $secondaryLightColor;
+        background-color: var(--backgroundColor1);
+        // background-color: $secondaryLightColor;
       }
     }
   }

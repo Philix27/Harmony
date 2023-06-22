@@ -1,0 +1,183 @@
+<html class="light">
+  <div class="flex">
+    <div class="sidebar flex flex-col antialiased relative shadow-xl">
+      <a
+        href="#"
+        class="logo flex-shrink-0 m-4 w-14 h-14 flex justify-center items-center text-white hover:text-gray-200 transition duration-300"
+      >
+        <i icon-name="layers"></i>
+      </a>
+      <div
+        class="mx-4 search flex-shrink-0 relative h-14 transition duration-300"
+      >
+        <div class="h-14 w-14 absolute z-10 grid place-items-center">
+          <i icon-name="search"></i>
+        </div>
+        <input
+          type="text"
+          class="pl-14 outline-none absolute top-0 left-0 w-full h-full rounded placeholder-current"
+          placeholder="Search..."
+        />
+      </div>
+      <nav class="my-4 flex-1">
+        <ul class="flex flex-col h-full">
+          <li>
+            <a
+              href="#"
+              class="mx-4 flex h-14 rounded items-center transition duration-300"
+            >
+              <div class="p-4"><i icon-name="home"></i></div>
+              <span class="font-semibold">Home</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="mx-4 flex h-14 rounded items-center transition duration-300 relative"
+            >
+              <div class="p-4"><i icon-name="mail"></i></div>
+              <span class="font-semibold">Messages</span>
+              <div
+                class="indicator bg-red-400 w-1.5 h-1.5 rounded-full right-0 absolute transition duration-300"
+              ></div>
+            </a>
+          </li>
+          <li class="active">
+            <a
+              href="#"
+              class="mx-4 flex h-14 rounded items-center transition duration-300"
+            >
+              <div class="p-4"><i icon-name="inbox"></i></div>
+              <span class="font-semibold">Projects</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="mx-4 flex h-14 rounded items-center transition duration-300"
+            >
+              <div class="p-4"><i icon-name="gauge"></i></div>
+              <span class="font-semibold">Reports</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="mx-4 flex h-14 rounded items-center transition duration-300"
+            >
+              <div class="p-4"><i icon-name="users"></i></div>
+              <span class="font-semibold">Team</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="mx-4 flex h-14 rounded items-center transition duration-300"
+            >
+              <div class="p-4"><i icon-name="wallet"></i></div>
+              <span class="font-semibold">Expenses</span>
+            </a>
+          </li>
+          <li class="withDivider mt-4 pt-4">
+            <a
+              href="#"
+              class="mx-4 flex h-14 rounded items-center transition duration-300"
+            >
+              <div class="p-4"><i icon-name="life-buoy"></i></div>
+              <span class="font-semibold">Support</span>
+            </a>
+          </li>
+          <li class="mt-auto">
+            <a
+              href="#"
+              class="mx-4 flex h-14 rounded items-center transition duration-300 relative"
+            >
+              <div class="p-4"><i icon-name="bell"></i></div>
+              <span class="font-semibold">Notifications</span>
+              <div
+                class="indicator bg-blue-400 w-1.5 h-1.5 rounded-full right-0 absolute transition duration-300"
+              ></div>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="mx-4 flex h-14 rounded items-center transition duration-300"
+            >
+              <div class="p-4"><i icon-name="settings"></i></div>
+              <span class="font-semibold">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer flex flex-shrink-0 px-4">
+        <div
+          class="px-4 flex items-center cursor-pointer icon transition duration-300"
+        >
+          <i icon-name="briefcase"></i>
+        </div>
+        <div class="flex w-full briefcase transition duration-300">
+          <div class="justify-center flex flex-col">
+            <a href="" class="whitespace-nowrap font-semibold"
+              >Hive Five Studio</a
+            >
+            <span class="text-sm">Workspace</span>
+          </div>
+          <div
+            class="ml-auto cursor-pointer items-center more flex transition duration-300"
+          >
+            <i icon-name="chevron-down"></i>
+          </div>
+        </div>
+      </div>
+      <div
+        id="sidebar-toggle"
+        class="transition duration-500 toggle flex w-8 h-8 items-center justify-center absolute rounded-full top-7 -right-4 z-10 cursor-pointer shadow"
+      >
+        <i icon-name="chevron-left"></i>
+      </div>
+    </div>
+    <div class="py-16 px-10">
+      <h1 class="text-4xl text-black font-semibold mb-8">Projects</h1>
+      <input type="checkbox" id="toggle-check" checked />
+      <label for="toggle-check" class="toggle-label cursor-pointer">
+        <div class="toggle-container">
+          <div class="toggle-light-icon icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </div>
+          <div class="toggle-dark-icon icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </div>
+          <div class="toggle-circle"></div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</html>
