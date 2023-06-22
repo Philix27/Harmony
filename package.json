@@ -12,7 +12,6 @@
     "@xstyled/core": "1.19.0",
     "@xstyled/styled-components": "1.19.0",
     "@xstyled/system": "1.19.0",
-    "bootstrap": "4.5.2",
     "@headlessui/react": "^1.7.14",
     "@reduxjs/toolkit": "^1.9.5",
     "@tauri-apps/api": "^1.2.2",
@@ -35,7 +34,37 @@
     "reactstrap": "8.6.0",
     "styled-components": "^5.3.8",
     "timeago-react": "^3.0.5",
-    "use-local-storage": "^2.3.6"
+    "use-local-storage": "^2.3.6",
+    "@hookform/resolvers": "^2.9.11",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.14.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-facebook-login": "^4.1.5",
+    "@types/react-router-dom": "^5.3.3",
+    "axios-mock-adapter": "^1.20.0",
+    "bootstrap": "^5.1.3",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
+    "emoji-picker-react": "^4.4.7",
+    "node-sass": "8.0.0",
+    "prettier": "^2.8.4",
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.2.2",
+    "react-hook-form": "^7.43.1",
+    "react-image-lightbox": "^5.1.4",
+    "react-router-dom": "^6.8.1",
+    "react-toastify": "^9.1.1",
+    "redux": "^4.1.1",
+    "redux-saga": "^1.1.3",
+    "simplebar-react": "^2.3.5",
+    "swiper": "6.8.4",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1",
+    "yup": "^1.0.0"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.2.1",
@@ -44,5 +73,23 @@
     "@types/react-dom": "^18.0.6",
     "@types/react-redux": "^7.1.25",
     "typescript": "^4.7.4"
+  },
+   "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
