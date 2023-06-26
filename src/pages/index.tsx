@@ -14,8 +14,8 @@ export default function Index(a: {
   return (
     <div className={styles.container}>
       <NavBar />
-      <Sidebar />
       {get_active_tab(activeTab.name)}
+      <Sidebar />
     </div>
   );
 }

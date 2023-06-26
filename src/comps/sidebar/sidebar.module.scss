@@ -17,7 +17,8 @@
 
 .sidebar {
   height: calc(100vh - 30px);
-  background-color: var(--backgroundColor2);
+  background-color: $background1;
+  // background-color: var(--backgroundColor2);
   display: flex;
   width: 50px;
   align-content: space-between;

@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/ext_comp/collapsible/.js"
+    "src/ext_comp/collapsible/.js",
+    "main.js"
   ],
   "exclude": ["node_modules"],
   "paths": {

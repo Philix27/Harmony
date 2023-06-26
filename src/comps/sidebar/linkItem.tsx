@@ -12,13 +12,13 @@ import {
 import { selectTab } from "../../utils/redux/store";
 import { changeTab } from "../../utils/redux/tabs/tab_slice";
 import Home from "../../views/home/home";
-import ChatSection from "../../views/chat/chat";
 import TasksSection from "../../views/tasks/task";
 import GoalsView from "../../views/goals/goals";
 import SettingsView from "../../views/settings/settings";
 import { useAppDispatch, useAppSelector } from "../../utils/redux/hooks";
-import WebFrame from "../../views/web/web";
+import WebFrame, { WebFrame2 } from "../../views/web/web";
 import CanvasFrame from "../../views/canvas/canvas";
+import { AiFillAccountBook } from "react-icons/ai";
 
 export interface ILinkItem {
   id?: number;
@@ -60,11 +60,7 @@ export const ListOfLinkItems: Array<ILinkItem> = [
     comp: <Home />,
     // comp: <div>Hello boys</div>,
   },
-  {
-    title: "DOOW",
-    icon: <MdNotes />,
-    comp: <ChatSection />,
-  },
+
   {
     title: "HARMONY",
     icon: <BsClipboard />,
@@ -89,6 +85,11 @@ export const ListOfLinkItems: Array<ILinkItem> = [
     title: "WEB",
     icon: <MdWeb />,
     comp: <WebFrame />,
+  },
+  {
+    title: "WEB2",
+    icon: <AiFillAccountBook />,
+    comp: <WebFrame2 />,
   },
 ];
 

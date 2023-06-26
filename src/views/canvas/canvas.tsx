@@ -8,6 +8,7 @@ import ReactFlow, {
   Controls,
   MiniMap,
   BackgroundVariant,
+  NodeToolbar,
 } from "reactflow";
 
 import "reactflow/dist/style.css";
@@ -37,6 +38,7 @@ export default function CanvasFrame() {
       >
         <Controls />
         {/* <MiniMap /> */}
+        <NodeToolbar isVisible={true} />
         <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
       </ReactFlow>
       {/* <div className={styles.base_home}></div> */}
