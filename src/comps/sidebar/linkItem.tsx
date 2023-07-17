@@ -9,13 +9,13 @@ import {
   MdShoppingBasket,
   MdWeb,
 } from "react-icons/md";
-import { selectTab } from "../../utils/redux/store";
-import { changeTab } from "../../utils/redux/tabs/tab_slice";
+import { selectTab } from "../../redux/store";
+import { changeTab } from "../../redux/tabs/tab_slice";
 import Home from "../../views/home/home";
 import TasksSection from "../../views/tasks/task";
 import GoalsView from "../../views/goals/goals";
 import SettingsView from "../../views/settings/settings";
-import { useAppDispatch, useAppSelector } from "../../utils/redux/hooks";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import WebFrame, { WebFrame2 } from "../../views/web/web";
 import CanvasFrame from "../../views/canvas/canvas";
 import { AiFillAccountBook } from "react-icons/ai";
