@@ -1,6 +1,5 @@
 // constants
-
-import { LAYOUT_MODES, TABS } from "../../views_chat/constants";
+import { TABS, LAYOUT_MODES } from "../../constants";
 import { LayoutActionTypes, LayoutState } from "./types";
 
 export const INIT_STATE: LayoutState = {

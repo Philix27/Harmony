@@ -5,7 +5,7 @@ import { UncontrolledTooltip } from "reactstrap";
 import { ChannelTypes } from "../../../data/chat";
 
 // components
-import AddButton from "../../../comps/AddButton";
+import AddButton from "../../../comps/chat/AddButton";
 import ChatChannel from "./ChatChannel";
 
 interface ChanelsProps {

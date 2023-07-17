@@ -1,9 +1,9 @@
 import type { AppProps } from "next/app";
-import Layout from "../comps/Layout";
-import "../styles/index.scss";
+import Layout from "../src/comps/Layout";
+import "../src/styles/index.scss";
 import React, { useState } from "react";
 import { Provider as ReduxProvider } from "react-redux";
-import { ReduxStore } from "../redux/store";
+import { ReduxStore } from "../src/redux/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [activeIndex, setActiveIndex] = useState(1);

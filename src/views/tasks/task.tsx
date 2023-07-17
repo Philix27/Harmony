@@ -1,5 +1,4 @@
 import React from "react";
-import products from "../../../data/products.json";
 import { AiFillDelete } from "react-icons/ai";
 import styles from "./tasks.module.scss";
 import NavBar from "../../comps/navbar/navbar.comp";
@@ -22,7 +21,7 @@ export default function TasksSection() {
                 <th>Assignee</th>
               </tr>
             </thead>
-            <tbody>
+            {/* <tbody>
               {products.map((agent, index) => (
                 <tr key={index}>
                   <td>{index + 1}.</td>
@@ -34,7 +33,7 @@ export default function TasksSection() {
                   <td>Solomon</td>
                 </tr>
               ))}
-            </tbody>
+            </tbody> */}
           </table>
         </div>
       </div>

@@ -29,7 +29,7 @@ import { CreateChannelPostData } from "../../../redux/actions";
 import AppSimpleBar from "../../../comps/AppSimpleBar";
 import AddGroupModal from "../../../comps/AddGroupModal";
 import InviteContactModal from "../../../comps/InviteContactModal";
-import AddButton from "../../../comps/AddButton";
+import AddButton from "../../../comps/chat/AddButton";
 import ContactModal from "../../../comps/ContactModal";
 
 import Favourites from "./Favourites";

@@ -18,5 +18,5 @@ export const ReduxStore = configureStore({
 export type RootState = ReturnType<typeof ReduxStore.getState>;
 export type AppDispatch = typeof ReduxStore.dispatch;
 
-// export const selectTab = (state: RootState) => state.tabs;
+export const selectTab = (state: RootState) => state.tabs;
 // export const selectCounter = (state: RootState) => state.counter;
