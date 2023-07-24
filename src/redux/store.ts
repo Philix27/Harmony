@@ -5,7 +5,7 @@ import reducers from "./reducers";
 import rootSaga from "./sagas";
 
 const sagaMiddleware = createSagaMiddleware();
-const middlewares = [sagaMiddleware];
+const middlewares = [sagaMiddleware.run(rootSaga)];
 const composeEnhancers = compose(applyMiddleware(...middlewares));
 
 export const ReduxStore = configureStore({

@@ -10,7 +10,7 @@ import Calls from "./calls/reducer";
 import Bookmarks from "./bookmarks/reducer";
 import Settings from "./settings/reducer";
 import Chats from "./chats/reducer";
-import CounterReducer from "./counter/counterSlice";
+import { CounterReducer } from "./counter/counterSlice";
 import TabReducer from "./tabs/tab_slice";
 
 export default combineReducers({
@@ -24,6 +24,6 @@ export default combineReducers({
   Bookmarks,
   Settings,
   Chats,
-  counter: CounterReducer,
+  counter: CounterReducer.reducer,
   tabs: TabReducer,
 });

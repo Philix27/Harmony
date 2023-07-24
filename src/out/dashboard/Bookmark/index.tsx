@@ -11,13 +11,13 @@ import {
 } from "../../../redux/actions";
 
 // components
-import Loader from "../../../comps/Loader";
-import AppSimpleBar from "../../../comps/AppSimpleBar";
-import LeftbarTitle from "../../../comps/LeftbarTitle";
 import BookMark from "./BookMark";
 
 // interface
 import { BookMarkTypes } from "../../../data/bookmarks";
+import AppSimpleBar from "../../../comps/chat/AppSimpleBar";
+import LeftbarTitle from "../../../comps/chat/LeftbarTitle";
+import Loader from "../../../comps/chat/Loader";
 
 interface IndexProps {}
 const Index = (props: IndexProps) => {
