@@ -10,7 +10,7 @@ import {
   MdWeb,
 } from "react-icons/md";
 import { selectTab } from "../../redux/store";
-import { changeTab } from "../../redux/tabs/tab_slice";
+import { changeTab } from "../../redux/slice/tab";
 import Home from "../../views/home/home";
 import TasksSection from "../../views/tasks/task";
 import GoalsView from "../../views/goals/goals";

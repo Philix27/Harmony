@@ -10,6 +10,7 @@ export default function Index(a: {
   activeIndex: number;
   setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
 }) {
+  // TabSettingsReduxType;
   // const activeTab: any = useAppSelector(selectTab);
   return (
     <div className={styles.container}>
