@@ -1,19 +1,24 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "moduleResolution": "node",
     "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": false,
     "noEmit": true,
-    "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "*": ["./src/*"],
+      "libs/*": ["./libs/*"]
+    },
     "plugins": [
       {
         "name": "next"
@@ -29,10 +34,5 @@
     "lib/collapsible/.js",
     "main.js"
   ],
-  "exclude": ["node_modules"],
-  "paths": {
-    "@harmony/redux/*": ["src/utils/redux"],
-    "*": ["./src/*"],
-    "libs/*": ["./libs/*"]
-  }
+  "exclude": ["node_modules"]
 }

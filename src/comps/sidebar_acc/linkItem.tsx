@@ -1,25 +1,15 @@
 import Link from "next/link";
 import styles from "./sidebar.module.scss";
-import { HiHome } from "react-icons/hi";
-import { BsClipboard } from "react-icons/bs";
-import {
-  MdDraw,
-  MdNotes,
-  MdSettings,
-  MdShoppingBasket,
-  MdWeb,
-} from "react-icons/md";
-
 import { changeTab } from "redux/slice/tab";
 import Home from "../../views/home/home";
-import TasksSection from "../../views/tasks/task";
+import { useAppDispatch, useAppSelector } from "redux/hooks";
+import { TabSettingsReduxType } from "redux/store";
+import { RiAccountCircleFill } from "react-icons/ri";
+import { MdGroup } from "react-icons/md";
+import CanvasFrame from "../../views/canvas/canvas";
 import GoalsView from "../../views/goals/goals";
 import SettingsView from "../../views/settings/settings";
-import { useAppDispatch, useAppSelector } from "redux/hooks";
 import WebFrame, { WebFrame2 } from "../../views/web/web";
-import CanvasFrame from "../../views/canvas/canvas";
-import { AiFillAccountBook } from "react-icons/ai";
-import { TabSettingsReduxType } from "redux/store";
 
 export interface ILinkItem {
   id?: number;
@@ -57,43 +47,44 @@ export function LinkItem(data: ILinkItem) {
 export const ListOfLinkItems: Array<ILinkItem> = [
   {
     title: "HOME",
-    icon: <HiHome />,
+    icon: <RiAccountCircleFill />,
     comp: <Home />,
-    // comp: <div>Hello boys</div>,
   },
   {
-    title: "HARMONY",
-    icon: <BsClipboard />,
-    comp: <TasksSection />,
+    title: "ORG_1",
+    icon: <MdGroup color="red" />,
+    comp: <Home />,
   },
   {
-    title: "MARKET",
-    icon: <MdShoppingBasket />,
+    title: "ORG_2",
+    icon: <MdGroup color="green" />,
     comp: <GoalsView />,
   },
   {
-    title: "CANVAS",
-    icon: <MdDraw />,
+    title: "ORG_3",
+    icon: <MdGroup color="yellow" />,
     comp: <CanvasFrame />,
   },
   {
-    title: "SETTINGS",
-    icon: <MdSettings />,
+    title: "ORG_4",
+    icon: <MdGroup color="pink" />,
     comp: <SettingsView />,
   },
   {
-    title: "WEB",
-    icon: <MdWeb />,
+    title: "ORG_5",
+    icon: <MdGroup color="skyblue" />,
     comp: <WebFrame />,
   },
   {
-    title: "WEB2",
-    icon: <AiFillAccountBook />,
+    title: "ORG_6",
+    icon: <MdGroup color="violet" />,
     comp: <WebFrame2 />,
   },
 ];
 
 export function get_active_tab(params: string): JSX.Element {
-  const v = ListOfLinkItems.filter((v) => v.title === params)[0]?.comp;
-  return v || <Home />;
+  const v = ListOfLinkItems.filter((v) => v.title === params)[0]?.comp || (
+    <Home />
+  );
+  return v;
 }

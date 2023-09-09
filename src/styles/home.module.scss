@@ -1,3 +1,5 @@
+@import "variables";
+
 .lightTheme {
   --backgroundColor1: #2d613d;
   --backgroundColor2: #2d613d;
@@ -21,7 +23,8 @@
 .container {
   display: flex;
   flex-direction: row;
-  background-color: var(--backgroundColor1);
+  // background-color: var(--backgroundColor1);
+  background-color: $background1;
   // max-height: 100vh;
   margin: 0px;
   padding: 0px;

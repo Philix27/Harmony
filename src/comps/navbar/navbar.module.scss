@@ -22,7 +22,7 @@
   }
 
   label.brand {
-    font-size: medium;
+    font-size: smaller;
     font-weight: bold;
     display: inline-block;
     padding-right: 20px;
@@ -51,6 +51,7 @@
         }
       }
       .active {
+        border-left: solid grey 0.01px;
         background-color: var(--backgroundColor1);
         // background-color: $secondaryLightColor;
       }

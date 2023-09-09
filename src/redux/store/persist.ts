@@ -3,6 +3,7 @@ import storage from "redux-persist/lib/storage";
 import { store } from "./";
 import { persistStore, persistReducer } from "redux-persist";
 import TabReducer from "../slice/tab";
+import TopTabReducer from "../slice/top_tab";
 
 
 
@@ -21,6 +22,7 @@ const authPersistConfig = {
 
 const rootReducer = combineReducers({
   TabReducer,
+  TopTabReducer,
 });
 
 export const persistedRootReducer = persistReducer(

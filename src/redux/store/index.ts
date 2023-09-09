@@ -23,7 +23,7 @@ export const store = configureStore({
 // state.OnboardingFormReducer;
 
 export const TabSettingsReduxType = (state: RootState) => state.TabReducer;
-
+export const TopTabReduxType = (state: RootState) => state.TopTabReducer;
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
