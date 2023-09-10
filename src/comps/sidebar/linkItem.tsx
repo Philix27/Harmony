@@ -59,7 +59,6 @@ export const ListOfLinkItems: Array<ILinkItem> = [
     title: "HOME",
     icon: <HiHome />,
     comp: <Home />,
-    // comp: <div>Hello boys</div>,
   },
   {
     title: "HARMONY",

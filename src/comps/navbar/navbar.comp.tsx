@@ -4,9 +4,6 @@ import styles from "./navbar.module.scss";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
 import { TopTabActions } from "redux/slice/top_tab";
 import { TopTabReduxType } from "redux/store";
-// import { TopTabReduxType } from "redux/store";
-// import { useAppDispatch, useAppSelector } from "redux/hooks";
-// import { TopTabActions } from "redux/slice/top_tab";
 
 export default function NavBar() {
   const app_store = useAppSelector(TopTabReduxType);

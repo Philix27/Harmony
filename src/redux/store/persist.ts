@@ -4,8 +4,7 @@ import { store } from "./";
 import { persistStore, persistReducer } from "redux-persist";
 import TabReducer from "../slice/tab";
 import TopTabReducer from "../slice/top_tab";
-
-
+import { TabsReducer } from "redux/tabs/reducer";
 
 const rootPersistConfig = {
   key: "root",
@@ -19,7 +18,9 @@ const authPersistConfig = {
   version: 1,
   blacklist: [],
 };
-
+export const AppActions = {
+  tab: TabsReducer.actions,
+};
 const rootReducer = combineReducers({
   TabReducer,
   TopTabReducer,
