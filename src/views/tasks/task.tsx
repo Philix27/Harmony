@@ -1,7 +1,5 @@
 import React from "react";
-import { AiFillDelete } from "react-icons/ai";
 import styles from "./tasks.module.scss";
-import NavBar from "../../comps/navbar/navbar.comp";
 
 export default function TasksSection() {
   return (

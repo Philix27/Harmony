@@ -2,24 +2,16 @@ import Link from "next/link";
 import styles from "./sidebar.module.scss";
 import { HiHome } from "react-icons/hi";
 import { BsClipboard } from "react-icons/bs";
-import {
-  MdDraw,
-  MdNotes,
-  MdSettings,
-  MdShoppingBasket,
-  MdWeb,
-} from "react-icons/md";
-
-import { changeTab } from "redux/slice/tab";
-import Home from "../../views/home/home";
-import TasksSection from "../../views/tasks/task";
-import GoalsView from "../../views/goals/goals";
-import SettingsView from "../../views/settings/settings";
-import { useAppDispatch, useAppSelector } from "redux/hooks";
-import WebFrame, { WebFrame2 } from "../../views/web/web";
-import CanvasFrame from "../../views/canvas/canvas";
+import { MdDraw, MdSettings, MdShoppingBasket, MdWeb } from "react-icons/md";
+import Home from "views/home/home";
+import TasksSection from "views/tasks/task";
+import GoalsView from "views/goals/goals";
+import SettingsView from "views/settings/settings";
+import { useAppDispatch, useAppSelector } from "hooks";
+import WebFrame, { WebFrame2 } from "views/web/web";
+import CanvasFrame from "views/canvas/canvas";
 import { AiFillAccountBook } from "react-icons/ai";
-import { TabSettingsReduxType } from "redux/store";
+import { TabsType } from "comps/navbar/types";
 
 export interface ILinkItem {
   id?: number;
@@ -29,8 +21,8 @@ export interface ILinkItem {
 }
 
 export function LinkItem(data: ILinkItem) {
-  const activeTab = useAppSelector(TabSettingsReduxType);
-  const dispatch = useAppDispatch();
+  const selector = useAppSelector((state) => state.tabs);
+  const { dispatch, actions } = useAppDispatch();
 
   return (
     <Link
@@ -38,12 +30,12 @@ export function LinkItem(data: ILinkItem) {
       className={styles.link}
       href="#"
       onClick={() => {
-        dispatch(changeTab({ name: data.title }));
+        dispatch(actions.tab.change_tab({ name: selector.name, org_name: "" }));
       }}
     >
       <li
         className={
-          activeTab.name === data.title
+          selector.name === data.title
             ? styles.activeItem
             : styles.sidebar_start_list_item
         }
@@ -92,7 +84,7 @@ export const ListOfLinkItems: Array<ILinkItem> = [
   },
 ];
 
-export function get_active_tab(params: string): JSX.Element {
+export function get_active_tab(params: TabsType): JSX.Element {
   const v = ListOfLinkItems.filter((v) => v.title === params)[0]?.comp;
   return v || <Home />;
 }

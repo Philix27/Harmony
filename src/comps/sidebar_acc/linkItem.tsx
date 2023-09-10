@@ -1,26 +1,25 @@
 import Link from "next/link";
 import styles from "./sidebar.module.scss";
-import { changeTab } from "redux/slice/tab";
-import Home from "../../views/home/home";
-import { useAppDispatch, useAppSelector } from "redux/hooks";
-import { TabSettingsReduxType } from "redux/store";
+import Home from "views/home/home";
+import { useAppDispatch, useAppSelector } from "hooks";
 import { RiAccountCircleFill } from "react-icons/ri";
 import { MdGroup } from "react-icons/md";
-import CanvasFrame from "../../views/canvas/canvas";
-import GoalsView from "../../views/goals/goals";
-import SettingsView from "../../views/settings/settings";
-import WebFrame, { WebFrame2 } from "../../views/web/web";
+import CanvasFrame from "views/canvas/canvas";
+import GoalsView from "views/goals/goals";
+import SettingsView from "views/settings/settings";
+import WebFrame, { WebFrame2 } from "views/web/web";
+import { TabsType } from "comps/navbar/types";
 
 export interface ILinkItem {
   id?: number;
-  title: string;
+  title: TabsType;
   icon: JSX.Element;
   comp: JSX.Element;
 }
 
 export function LinkItem(data: ILinkItem) {
-  const activeTab = useAppSelector(TabSettingsReduxType);
-  const dispatch = useAppDispatch();
+  const selector = useAppSelector((s) => s.tabs);
+  const { dispatch, actions } = useAppDispatch();
 
   return (
     <Link
@@ -28,12 +27,12 @@ export function LinkItem(data: ILinkItem) {
       className={styles.link}
       href="#"
       onClick={() => {
-        dispatch(changeTab({ name: data.title }));
+        dispatch(actions.tab.change_tab({ name: data.title, org_name: "" }));
       }}
     >
       <li
         className={
-          activeTab.name === data.title
+          selector.name === data.title
             ? styles.activeItem
             : styles.sidebar_start_list_item
         }
@@ -51,32 +50,32 @@ export const ListOfLinkItems: Array<ILinkItem> = [
     comp: <Home />,
   },
   {
-    title: "ORG_1",
+    title: "CHAT",
     icon: <MdGroup color="red" />,
     comp: <Home />,
   },
   {
-    title: "ORG_2",
+    title: "FINANCE",
     icon: <MdGroup color="green" />,
     comp: <GoalsView />,
   },
   {
-    title: "ORG_3",
+    title: "NOTES",
     icon: <MdGroup color="yellow" />,
     comp: <CanvasFrame />,
   },
   {
-    title: "ORG_4",
+    title: "TASKS",
     icon: <MdGroup color="pink" />,
     comp: <SettingsView />,
   },
   {
-    title: "ORG_5",
+    title: "HOME",
     icon: <MdGroup color="skyblue" />,
     comp: <WebFrame />,
   },
   {
-    title: "ORG_6",
+    title: "HOME",
     icon: <MdGroup color="violet" />,
     comp: <WebFrame2 />,
   },

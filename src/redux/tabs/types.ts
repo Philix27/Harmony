@@ -1,9 +1,11 @@
-export type TABS = "CHAT" | "TASKS" | "NOTES" | "FINANCE";
+import { TabsType } from "comps/navbar/types";
 
 export interface IPayload {
-  tab: TABS;
+  name: TabsType;
+  org_name: string;
 }
 
 export const initialState: IPayload = {
-  tab: "CHAT",
+  name: "CHAT",
+  org_name: "ORG",
 };
