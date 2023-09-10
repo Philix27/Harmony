@@ -3,6 +3,7 @@ import storage from "redux-persist/lib/storage";
 import { store } from "./";
 import { persistStore, persistReducer } from "redux-persist";
 import { TabsReducer } from "redux/tabs/reducer";
+import { ChatReducer } from "redux/chat/reducer";
 
 const rootPersistConfig = {
   key: "root",
@@ -18,9 +19,11 @@ const authPersistConfig = {
 };
 export const AppActions = {
   tab: TabsReducer.actions,
+  chat: ChatReducer.actions,
 };
 const rootReducer = combineReducers({
   tabs: TabsReducer.reducer,
+  chat: ChatReducer.reducer,
 });
 
 export const persistedRootReducer = persistReducer(

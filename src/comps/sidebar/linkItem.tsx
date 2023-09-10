@@ -2,20 +2,19 @@ import Link from "next/link";
 import styles from "./sidebar.module.scss";
 import { HiHome } from "react-icons/hi";
 import { BsClipboard } from "react-icons/bs";
-import { MdDraw, MdSettings, MdShoppingBasket, MdWeb } from "react-icons/md";
+import { MdDraw, MdSettings, MdShoppingBasket } from "react-icons/md";
 import Home from "views/home/home";
 import TasksSection from "views/tasks/task";
 import GoalsView from "views/goals/goals";
 import SettingsView from "views/settings/settings";
 import { useAppDispatch, useAppSelector } from "hooks";
-import WebFrame, { WebFrame2 } from "views/web/web";
 import CanvasFrame from "views/canvas/canvas";
-import { AiFillAccountBook } from "react-icons/ai";
 import { TabsType } from "comps/navbar/types";
+import ChatApp from "views/chat";
 
 export interface ILinkItem {
   id?: number;
-  title: string;
+  title: TabsType;
   icon: JSX.Element;
   comp: JSX.Element;
 }
@@ -53,34 +52,24 @@ export const ListOfLinkItems: Array<ILinkItem> = [
     comp: <Home />,
   },
   {
-    title: "HARMONY",
+    title: "CHAT",
     icon: <BsClipboard />,
-    comp: <TasksSection />,
+    comp: <ChatApp />,
   },
   {
-    title: "MARKET",
+    title: "FINANCE",
     icon: <MdShoppingBasket />,
     comp: <GoalsView />,
   },
   {
-    title: "CANVAS",
+    title: "NOTES",
     icon: <MdDraw />,
     comp: <CanvasFrame />,
   },
   {
-    title: "SETTINGS",
+    title: "TASKS",
     icon: <MdSettings />,
     comp: <SettingsView />,
-  },
-  {
-    title: "WEB",
-    icon: <MdWeb />,
-    comp: <WebFrame />,
-  },
-  {
-    title: "WEB2",
-    icon: <AiFillAccountBook />,
-    comp: <WebFrame2 />,
   },
 ];
 

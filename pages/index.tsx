@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "comps/navbar";
 import styles from "styles/home.module.scss";
-import { useAppSelector } from "redux/hooks";
+import { useAppSelector } from "hooks";
 import { get_active_tab } from "comps/sidebar/linkItem";
 import SidebarAccounts from "comps/sidebar_acc/Sidebar";
 

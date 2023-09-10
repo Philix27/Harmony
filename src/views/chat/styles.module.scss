@@ -1,0 +1,33 @@
+@import "../../styles/screensize";
+@import "../../styles/variables";
+
+.container {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  .sidebar {
+    min-height: 100%;
+    width: 20%;
+    background-color: aquamarine;
+
+    .top {
+      height: 40px;
+      background-color: rgb(2, 29, 30);
+      padding: 10px;
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      color: #fff;
+    }
+    .contents {
+      padding: 10px;
+    }
+  }
+  .main {
+    min-height: 100%;
+    width: 80%;
+    background-color: rgb(77, 144, 122);
+  }
+  .info {
+  }
+}

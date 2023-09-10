@@ -19,12 +19,6 @@ export const store = configureStore({
     }),
 });
 
-// export const selectOnboardingForm = (state: RootState) =>
-// state.OnboardingFormReducer;
-
-export const TabSettingsReduxType = (state: RootState) => state.TabReducer;
-export const TopTabReduxType = (state: RootState) => state.TopTabReducer;
-
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 export type AppThunk<ReturnType = void> = ThunkAction<
@@ -33,4 +27,3 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   Action<string>
 >;
-
