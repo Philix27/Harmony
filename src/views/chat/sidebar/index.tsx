@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { useAppDispatch, useAppSelector } from "hooks";
-import SideBar from "./sidebar";
+import TopBar from "./topBar";
 
-export default function ChatApp() {
+export default function SideBar() {
   const selector = useAppSelector((s) => s.chat);
   const { dispatch, actions } = useAppDispatch();
-
   return (
     <div className={styles.container}>
-      <SideBar />
-      <div className={styles.main}></div>
-      {!selector.is_info_bar_open && <div className={styles.info}></div>}
+      <TopBar />
+      <div className={styles.contents}>
+        <ul>
+          <li>Jake</li>
+          <li>Soloe</li>
+        </ul>
+      </div>
     </div>
   );
 }

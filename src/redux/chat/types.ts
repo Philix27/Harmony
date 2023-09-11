@@ -1,21 +1,12 @@
-export type TypeCreateAccountStep =
-  | "1. SET_NEW_CORPORATE_ACCOUNT"
-  | "2. VERIFY_INCORPORATION_DOCS"
-  | "3. VERIFY_PERSONAL_DETAILS"
-  | "4. CORPORATE_ACCOUNT_DETAILS"
-  | "5. CONGRATULATIONS"
-  | "6. ERROR";
+import { ChatTabsType } from "views/chat/sidebar/types";
+
 
 export interface IPayload {
-  is_open?: boolean;
-  active_tab?: string;
-  create_account_modal?: "SHOW" | "HIDE";
-  create_account_step?: TypeCreateAccountStep;
+  is_info_bar_open?: boolean;
+  active_tab?: ChatTabsType;
 }
 
 export const initialState: IPayload = {
-  is_open: false,
-  active_tab: "VIRTUAL_CARD",
-  create_account_modal: "HIDE",
-  create_account_step: "1. SET_NEW_CORPORATE_ACCOUNT",
+  is_info_bar_open: false,
+  active_tab: "HOME",
 };

@@ -7,17 +7,29 @@
   margin-top: 30px;
   .sidebar {
     min-height: 100%;
-    width: 20%;
-    background-color: aquamarine;
+    width: 500px;
+    background-color: $background1;
 
     .top {
       height: 40px;
-      background-color: rgb(2, 29, 30);
-      padding: 10px;
+      background-color: $accentColor;
+
       display: flex;
-      width: 100%;
       justify-content: space-around;
       color: #fff;
+      .icon {
+        padding: 10px;
+        svg {
+          font-size: larger;
+        }
+      }
+      .active {
+        padding: 10px;
+        border-bottom: solid 1px #fff;
+        svg {
+          margin-bottom: 10px;
+        }
+      }
     }
     .contents {
       padding: 10px;
@@ -25,9 +37,12 @@
   }
   .main {
     min-height: 100%;
-    width: 80%;
+    width: 100%;
+    // width: calc(100vw - 400px - 600px - 50px);
     background-color: rgb(77, 144, 122);
   }
   .info {
+    width: 500px;
+    background-color: $accentColor;
   }
 }
