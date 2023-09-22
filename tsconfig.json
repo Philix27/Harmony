@@ -31,7 +31,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "lib/collapsible/.js",
+    "../comps_library/lib/collapsible/.js",
     "main.js"
   ],
   "exclude": ["node_modules"]
