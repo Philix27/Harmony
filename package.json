@@ -23,7 +23,7 @@
     "clsx": "^2.0.0",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
-    "electron": "^25.2.0",
+    "electron": "^25.8.4",
     "emoji-picker-react": "^4.4.7",
     "firebase": "^9.17.1",
     "konva": "^9.1.0",
