@@ -11,13 +11,6 @@ export default function TopBar() {
     <div className={styles.top}>
       <div
         className={`${styles.icon} ${
-          selector.active_tab === "HOME" ? styles.active : ""
-        }`}
-      >
-        <FaHome onClick={() => dispatch(actions.chat.change_tab("HOME"))} />
-      </div>
-      <div
-        className={`${styles.icon} ${
           selector.active_tab === "CHAT" ? styles.active : ""
         }`}
       >

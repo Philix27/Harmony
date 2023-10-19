@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { useAppDispatch, useAppSelector } from "hooks";
 import TopBar from "./topBar";
+import Channels from "./channels";
 
 export default function SideBar() {
   const selector = useAppSelector((s) => s.chat);
@@ -9,12 +9,7 @@ export default function SideBar() {
   return (
     <div className={styles.container}>
       <TopBar />
-      <div className={styles.contents}>
-        <ul>
-          <li>Jake</li>
-          <li>Soloe</li>
-        </ul>
-      </div>
+      <Channels />
     </div>
   );
 }

@@ -19,17 +19,9 @@ export interface ILinkItem {
 
 export function LinkItem(data: ILinkItem) {
   const selector = useAppSelector((s) => s.tabs);
-  const { dispatch, actions } = useAppDispatch();
 
   return (
-    <Link
-      key={data.id}
-      className={styles.link}
-      href="#"
-      onClick={() => {
-        dispatch(actions.tab.change_tab({ name: data.title, org_name: "" }));
-      }}
-    >
+    <Link key={data.id} className={styles.link} href="#">
       <li
         className={
           selector.name === data.title
