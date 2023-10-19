@@ -8,5 +8,5 @@ export interface IPayload {
 
 export const initialState: IPayload = {
   is_info_bar_open: false,
-  active_tab: "HOME",
+  active_tab: "CHAT",
 };

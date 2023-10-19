@@ -1,2 +1,2 @@
-export type ChatTabsType = "HOME" | "CHAT" | "FAVORITE" | "CALLS" | "SETTINGS";
+export type ChatTabsType = "CHAT" | "FAVORITE" | "CALLS" | "SETTINGS";
 export const SidebarTabs = {};

@@ -35,14 +35,4 @@
       padding: 10px;
     }
   }
-  .main {
-    min-height: 100%;
-    width: 100%;
-    // width: calc(100vw - 400px - 600px - 50px);
-    background-color: rgb(77, 144, 122);
-  }
-  .info {
-    width: 500px;
-    background-color: $accentColor;
-  }
 }

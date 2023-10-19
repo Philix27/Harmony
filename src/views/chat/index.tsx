@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./styles.module.scss";
 import { useAppDispatch, useAppSelector } from "hooks";
 import SideBar from "./sidebar";
+import MainContent from "./main";
 
 export default function ChatApp() {
   const selector = useAppSelector((s) => s.chat);
@@ -10,8 +11,7 @@ export default function ChatApp() {
   return (
     <div className={styles.container}>
       <SideBar />
-      <div className={styles.main}></div>
-      {!selector.is_info_bar_open && <div className={styles.info}></div>}
+      <MainContent />
     </div>
   );
 }

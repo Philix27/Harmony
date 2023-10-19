@@ -1,23 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./styles.module.scss";
 import { useAppDispatch, useAppSelector } from "hooks";
-import TopBar from "./topBar";
 import { FaHashtag } from "react-icons/fa";
 import { styled } from "styled-components";
 
 export default function Channels() {
   const selector = useAppSelector((s) => s.chat);
-    const { dispatch, actions } = useAppDispatch();
-    
+  const { dispatch, actions } = useAppDispatch();
+
   return (
     <div className={styles.contents}>
+      <Tile>
+        <FaHashtag />
+        <p>General</p>
+      </Tile>
       <Heading>
         <h5>Channels</h5>
       </Heading>
-      <Tile>
-        <FaHashtag />
-        <p>Magret</p>
-      </Tile>
       <Tile>
         <FaHashtag />
         <p>Innocencia</p>
