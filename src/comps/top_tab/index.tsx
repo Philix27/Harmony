@@ -1,7 +1,8 @@
 import Link from "next/link";
 import styles from "./navbar.module.scss";
 import { useAppDispatch, useAppSelector } from "hooks";
-import { tabList } from "./list";
+import { TabItems } from "./array";
+
 
 export default function NavBar() {
   const app_store = useAppSelector((state) => state.tabs);
@@ -16,9 +17,9 @@ export default function NavBar() {
       </label>
       <div className={styles.tabs_container}>
         <div className={styles.tab_box}>
-          {tabList.map((v) => (
+          {TabItems.map((v, i) => (
             <TabItem
-              key={v.title}
+              key={i}
               isActive={app_store.name === v.type}
               onClick={() => {
                 dispatch(

@@ -1,37 +1,23 @@
 import Link from "next/link";
 import styles from "./sidebar.module.scss";
-import { HiHome } from "react-icons/hi";
-import { BsClipboard } from "react-icons/bs";
-import { MdDraw, MdSettings, MdShoppingBasket } from "react-icons/md";
 import Home from "views/home/home";
-import TasksSection from "views/tasks/task";
-import GoalsView from "views/goals/goals";
-import SettingsView from "views/settings/settings";
-import { useAppDispatch, useAppSelector } from "hooks";
+import { useAppSelector } from "hooks";
+import { RiAccountCircleFill } from "react-icons/ri";
+import { MdGroup } from "react-icons/md";
 import CanvasFrame from "views/canvas/canvas";
-import { TabsType } from "comps/navbar/types";
-import ChatApp from "views/chat";
 
 export interface ILinkItem {
   id?: number;
-  title: TabsType;
+  title: string;
   icon: JSX.Element;
   comp: JSX.Element;
 }
 
 export function LinkItem(data: ILinkItem) {
-  const selector = useAppSelector((state) => state.tabs);
-  const { dispatch, actions } = useAppDispatch();
+  const selector = useAppSelector((s) => s.tabs);
 
   return (
-    <Link
-      key={data.id}
-      className={styles.link}
-      href="#"
-      onClick={() => {
-        dispatch(actions.tab.change_tab({ name: selector.name, org_name: "" }));
-      }}
-    >
+    <Link key={data.id} className={styles.link} href="#">
       <li
         className={
           selector.name === data.title
@@ -45,35 +31,27 @@ export function LinkItem(data: ILinkItem) {
   );
 }
 
-export const ListOfLinkItems: Array<ILinkItem> = [
+export const GroupItemList: Array<ILinkItem> = [
   {
-    title: "HOME",
-    icon: <HiHome />,
+    title: "Doow",
+    icon: <RiAccountCircleFill />,
     comp: <Home />,
   },
   {
-    title: "CHAT",
-    icon: <BsClipboard />,
-    comp: <ChatApp />,
+    title: "Hexelan",
+    icon: <MdGroup color="red" />,
+    comp: <Home />,
   },
   {
-    title: "FINANCE",
-    icon: <MdShoppingBasket />,
-    comp: <GoalsView />,
-  },
-  {
-    title: "NOTES",
-    icon: <MdDraw />,
+    title: "Turing",
+    icon: <MdGroup color="yellow" />,
     comp: <CanvasFrame />,
-  },
-  {
-    title: "TASKS",
-    icon: <MdSettings />,
-    comp: <SettingsView />,
   },
 ];
 
-export function get_active_tab(params: TabsType): JSX.Element {
-  const v = ListOfLinkItems.filter((v) => v.title === params)[0]?.comp;
-  return v || <Home />;
+export function get_active_tab(params: string): JSX.Element {
+  const v = GroupItemList.filter((v) => v.title === params)[0]?.comp || (
+    <Home />
+  );
+  return v;
 }

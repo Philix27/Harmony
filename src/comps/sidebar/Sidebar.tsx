@@ -1,12 +1,12 @@
 import styles from "./sidebar.module.scss";
-import { LinkItem, ListOfLinkItems } from "./linkItem";
+import { LinkItem, GroupItemList } from "./linkItem";
 
-export default function Sidebar() {
+export default function SidebarAccounts() {
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebar_start}>
         <ul className={styles.sidebar_start_list}>
-          {ListOfLinkItems.map((v, i) =>
+          {GroupItemList.map((v, i) =>
             LinkItem({
               id: i,
               title: v.title,

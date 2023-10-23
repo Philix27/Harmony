@@ -1,14 +1,12 @@
 import React from "react";
-import NavBar from "comps/navbar";
+import NavBar from "comps/top_tab";
 import styles from "styles/home.module.scss";
 import { useAppSelector } from "hooks";
-import { get_active_tab } from "comps/sidebar/linkItem";
-import SidebarAccounts from "comps/sidebar_acc/Sidebar";
+// import { get_active_tab } from "comps/top_tab/linkItem";
+import SidebarAccounts from "comps/sidebar/Sidebar";
+import { get_active_tab } from "comps/top_tab/array";
 
-export default function Index(a: {
-  activeIndex: number;
-  setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
-}) {
+export default function Index() {
   const activeTab = useAppSelector((s) => s.tabs);
   return (
     <div className={styles.container}>

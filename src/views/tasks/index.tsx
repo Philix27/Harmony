@@ -19,19 +19,6 @@ export default function TasksSection() {
                 <th>Assignee</th>
               </tr>
             </thead>
-            {/* <tbody>
-              {products.map((agent, index) => (
-                <tr key={index}>
-                  <td>{index + 1}.</td>
-                  <td>APCEIMS</td>
-                  <td>In progress</td>
-                  <td>50%</td>
-                  <td>High</td>
-                  <td>21st July, 2022</td>
-                  <td>Solomon</td>
-                </tr>
-              ))}
-            </tbody> */}
           </table>
         </div>
       </div>
