@@ -12,6 +12,7 @@ import ReactFlow, {
 } from "reactflow";
 
 import "reactflow/dist/style.css";
+import styled from "styled-components";
 
 const initialNodes = [
   { id: "1", position: { x: 0, y: 0 }, data: { label: "1" } },
@@ -28,7 +29,7 @@ export default function CanvasFrame() {
   );
 
   return (
-    <div className={styles.home}>
+    <Wrapper>
       <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -42,6 +43,24 @@ export default function CanvasFrame() {
         <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
       </ReactFlow>
       {/* <div className={styles.base_home}></div> */}
-    </div>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  justify-content: center;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  margin: 0px auto;
+  box-sizing: content-box;
+  position: relative;
+  padding-top: 30px;
+  height: calc(100vh - 30px);
+  // overflow: hidden;
+  // align-items: center;
+`;

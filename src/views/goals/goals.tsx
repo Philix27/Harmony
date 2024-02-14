@@ -1,20 +1,13 @@
 import React from "react";
-import { IconBaseProps } from "react-icons";
-import { FaCircle, FaCriticalRole, FaUserCircle } from "react-icons/fa";
-import { RiReactjsFill } from "react-icons/ri";
-import GoalItem from "../../comps/goalItem/goalItem";
-import styles from "./goals.module.scss";
-import { styled } from "styled-components";
-import {
-  BsCircleHalf,
-  BsDashCircleDotted,
-  BsSlashCircle,
-} from "react-icons/bs";
+import { FaCircle, FaUserCircle } from "react-icons/fa";
+import { BsCircleHalf } from "react-icons/bs";
+import { GoalItem } from "comps";
+import { GoalStyles } from "./styles";
 
 export default function GoalsView() {
   return (
-    <div className={styles.container} data-theme="dark">
-      <div className={styles.section}>
+    <GoalStyles>
+      <div className={"section"}>
         <GoalItem
           title="Goals"
           createdBy={"Jollie"}
@@ -44,7 +37,7 @@ export default function GoalsView() {
           icon={FaCircle}
         />
       </div>
-      <div className={styles.section}>
+      <div className={"section"}>
         <GoalItem
           title="Goals"
           createdBy={"Jollie"}
@@ -67,7 +60,7 @@ export default function GoalsView() {
           icon={FaCircle}
         />
       </div>
-      <div className={styles.section}>
+      <div className={"section"}>
         <GoalItem
           title="Goals"
           createdBy={"Jollie"}
@@ -83,6 +76,6 @@ export default function GoalsView() {
           icon={FaUserCircle}
         />
       </div>
-    </div>
+    </GoalStyles>
   );
 }

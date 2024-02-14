@@ -11,7 +11,7 @@ interface Props {
   icon: IconType;
 }
 
-export default function GoalItem(props: Props) {
+export function GoalItem(props: Props) {
   return (
     <div className={styles.goal} data-theme="dark">
       <div className={styles.title}>

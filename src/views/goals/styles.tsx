@@ -1,27 +1,26 @@
-@import "../../styles/screensize";
-@import "../../styles/variables";
+import styled from "styled-components";
 
-.container {
+export const GoalStyles = styled.div`
   margin-top: 50px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  background-color: var(--backgroundColor1);
+  background-color: ${(props) => props.theme.colors.backgroundLight};
   .section {
-    background-color: var(--backgroundColor2);
+    background-color: ${(props) => props.theme.colors.backgroundDark};
     width: 100%;
     color: #fff;
     margin: 5px 5px;
     padding: 10px;
     border-radius: 10px;
     .goal {
-      background-color: var(--backgroundColor1);
+      background-color: ${(props) => props.theme.colors.backgroundLight};
       margin-bottom: 10px;
       padding: 10px 10px;
       border-radius: 5px;
       &:hover {
-        background-color: var(--backgroundColor2);
+        background-color: ${(props) => props.theme.colors.backgroundDark};
       }
       .title {
         display: flex;
@@ -37,4 +36,4 @@
       }
     }
   }
-}
+`;
