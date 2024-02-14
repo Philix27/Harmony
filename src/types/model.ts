@@ -1,17 +1,17 @@
-interface IApp {
+export interface IApp {
   user: "";
   orgs: IOrganization[];
 }
-interface IOrganization {
+export interface IOrganization {
   docs: IDocs[];
   chat: "app";
   analytics: "app";
 }
 
-interface IOrganizationSubgroups {
+export interface IOrganizationSubgroups {
   docs: IDocs[];
 }
 
-interface IDocs {
+export interface IDocs {
   name: "canvas" | "note" | "meeting" | "reminder";
 }

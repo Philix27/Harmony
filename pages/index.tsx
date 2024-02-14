@@ -3,7 +3,7 @@ import NavBar from "comps/top_tab";
 import styles from "styles/home.module.scss";
 import { useAppSelector } from "hooks";
 // import { get_active_tab } from "comps/top_tab/linkItem";
-import SidebarAccounts from "comps/sidebar/Sidebar";
+import SidebarAccounts from "comps/global/sidebar";
 import { get_active_tab } from "comps/top_tab/array";
 
 export default function Index() {

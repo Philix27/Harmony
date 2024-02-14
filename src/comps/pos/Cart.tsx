@@ -2,7 +2,8 @@ import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { FaShoppingCart } from "react-icons/fa";
 import { GrAddCircle, GrSubtractCircle } from "react-icons/gr";
-export default function Cart() {
+
+export function Cart() {
   return (
     <div className="cart">
       <div className="topSection">
