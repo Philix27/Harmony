@@ -1,7 +1,8 @@
 import styles from "./sidebar.module.scss";
-import { LinkItem, GroupItemList } from "./linkItem";
+import { LinkItem } from "./linkItem";
+import { GroupItemList } from "./data";
 
-export default function SidebarAccounts() {
+export function SidebarAccounts() {
   return (
     <div className={styles.sidebar}>
       <div className={styles.sidebar_start}>
