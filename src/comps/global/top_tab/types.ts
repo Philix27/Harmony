@@ -1,4 +1,5 @@
-export type TabsType = "CHAT" | "TASKS" | "NOTES" | "CANVAS" | "OTHERS";
+import { TabsType } from "types";
+
 export interface ILinkItem {
   id?: number;
   type: TabsType;
