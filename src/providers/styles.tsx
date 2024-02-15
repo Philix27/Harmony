@@ -1,11 +1,11 @@
-import { AppToastContainer } from "comps";
+import { AppToastContainer } from "app/comps";
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { themeLight } from "styles";
+import { themeDark, themeLight } from "app/styles";
 
 export function StylesProvider(props: { children: React.ReactNode }) {
   return (
-    <ThemeProvider theme={themeLight}>
+    <ThemeProvider theme={themeDark}>
       {props.children}
       <AppToastContainer />
     </ThemeProvider>

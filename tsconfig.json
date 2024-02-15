@@ -16,7 +16,7 @@
     "incremental": true,
     "noUncheckedIndexedAccess": true,
     "paths": {
-      "*": ["./src/*"],
+      "app/*": ["./src/*"],
       "libs/*": ["./libs/*"]
     },
     "plugins": [

@@ -1,13 +1,12 @@
 import type { AppProps } from "next/app";
-// import "../src/styles/index.scss";
-import "styles/index";
-import React, { useState } from "react";
+import React from "react";
 import { Provider as ReduxProvider } from "react-redux";
-import { store } from "../src/redux/store";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import { type Session } from "next-auth";
-import { AppProviders } from "providers";
+import { AppProviders } from "app/providers";
+import { store } from "app/redux";
+import { GlobalStyles } from "app/styles";
 
 export default function App({
   Component,
@@ -20,6 +19,7 @@ export default function App({
       <PersistGate loading={null} persistor={persistor}>
         <AppProviders>
           <Component {...pageProps} />
+          <GlobalStyles />
         </AppProviders>
       </PersistGate>
     </ReduxProvider>

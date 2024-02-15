@@ -1,8 +1,6 @@
 import React from "react";
-
 import { MdCall, MdFavorite, MdGroups, MdSettings } from "react-icons/md";
-import { useAppDispatch, useAppSelector } from "hooks";
-import { FaHome } from "react-icons/fa";
+import { useAppDispatch, useAppSelector } from "app/hooks";
 
 export default function TopBar() {
   const selector = useAppSelector((s) => s.chat);

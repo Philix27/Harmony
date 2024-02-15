@@ -1,9 +1,8 @@
 import React from "react";
-
-import { useAppDispatch, useAppSelector } from "hooks";
 import { FaHashtag, FaPhone, FaVideo } from "react-icons/fa";
 import { styled } from "styled-components";
 import { MdVideoCall } from "react-icons/md";
+import { useAppDispatch, useAppSelector } from "app/hooks";
 
 export default function ChatCallsList() {
   const selector = useAppSelector((s) => s.chat);

@@ -1,8 +1,8 @@
-import { useAppDispatch, useAppSelector } from "hooks";
+import { useAppDispatch, useAppSelector } from "app/hooks";
 import TopBar from "./topBar";
 import Channels from "./channels";
 import ChatCallsList from "./calls";
-import { ChatTabsType } from "types";
+import { ChatTabsType } from "app/types";
 import { Wrapper } from "./styles";
 
 export default function SideBar() {

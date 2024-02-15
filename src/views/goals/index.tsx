@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCircle, FaUserCircle } from "react-icons/fa";
 import { BsCircleHalf } from "react-icons/bs";
-import { GoalItem } from "comps";
+import { GoalItem } from "app/comps";
 import { GoalStyles } from "./styles";
 
 export default function GoalsView() {

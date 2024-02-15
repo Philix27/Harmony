@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useAppDispatch, useAppSelector } from "hooks";
+import { useAppDispatch, useAppSelector } from "app/hooks";
 import { FaHashtag } from "react-icons/fa";
 import { styled } from "styled-components";
 

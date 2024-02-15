@@ -6,6 +6,8 @@ declare module "styled-components" {
   export interface DefaultTheme {
     colors: {
       primary: string;
+      primaryLight: string;
+      primaryDark: string;
       secondary: string;
       background: string;
       backgroundLight: string;
@@ -23,7 +25,6 @@ declare module "styled-components" {
       primaryRed: string;
       primaryBlue: string;
       primaryOrange: string;
-      accentColor: string;
     };
     fonts: {
       primary: "Anek Malayalam";
