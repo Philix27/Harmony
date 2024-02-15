@@ -7,6 +7,7 @@ import { store } from "../src/redux/store";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import { type Session } from "next-auth";
+import { AppProviders } from "providers";
 
 export default function App({
   Component,
@@ -17,7 +18,9 @@ export default function App({
   return (
     <ReduxProvider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <Component {...pageProps} />
+        <AppProviders>
+          <Component {...pageProps} />
+        </AppProviders>
       </PersistGate>
     </ReduxProvider>
   );
