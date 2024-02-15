@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
-import "../src/styles/index.scss";
+// import "../src/styles/index.scss";
+import "styles/index";
 import React, { useState } from "react";
 import { Provider as ReduxProvider } from "react-redux";
 import { store } from "../src/redux/store";

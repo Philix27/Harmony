@@ -1,8 +1,7 @@
 import Link from "next/link";
-import styles from "./sidebar.module.scss";
-import Home from "views/home/home";
 import { useAppSelector } from "hooks";
 import { GroupItemList } from "./data";
+import { Home } from "views";
 
 export interface ILinkItem {
   id?: number;
@@ -15,12 +14,12 @@ export function LinkItem(data: ILinkItem) {
   const selector = useAppSelector((s) => s.tabs);
 
   return (
-    <Link key={data.id} className={styles.link} href="#">
+    <Link key={data.id} className={"link"} href="#">
       <li
         className={
           selector.name === data.title
-            ? styles.activeItem
-            : styles.sidebar_start_list_item
+            ? "activeItem"
+            : "sidebar_start_list_item"
         }
       >
         {data.icon}

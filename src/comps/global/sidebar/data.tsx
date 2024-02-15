@@ -1,8 +1,8 @@
 import { MdGroup } from "react-icons/md";
 import { RiAccountCircleFill } from "react-icons/ri";
-import CanvasFrame from "views/canvas/canvas";
-import Home from "views/home/home";
 import { ILinkItem } from "./linkItem";
+import { Home } from "views/home";
+import { CanvasFrame } from "views";
 
 export const GroupItemList: Array<ILinkItem> = [
   {

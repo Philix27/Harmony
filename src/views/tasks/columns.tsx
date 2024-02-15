@@ -14,13 +14,14 @@ export default function Column(props: {
       <h3>{props.title}</h3>
       <Droppable droppableId={props.id}>
         {(provided, snapshot) => {
-          <TaskList
+          <div
+            className="tasklist"
             ref={provided.innerRef}
             {...provided.droppableProps}
             isDraggingOver={snapshot.isDraggingOver}
           >
             {provided.placeholder}
-          </TaskList>;
+          </div>;
         }}
       </Droppable>
     </Wrapper>
@@ -36,12 +37,12 @@ const Wrapper = styled.div`
   -ms-overflow-style: none;
   scrollbar-width: none;
   border-radius: 1px solid grey;
-`;
-const TaskList = styled.div`
-  padding: 3px;
-  transition: background-color 0.2s ease;
-  background-color: #f4f5f7;
-  border-radius: 2.5px;
-  flex-grow: 1;
-  min-height: 100px;
+  .tasklist {
+    padding: 3px;
+    transition: background-color 0.2s ease;
+    background-color: #f4f5f7;
+    border-radius: 2.5px;
+    flex-grow: 1;
+    min-height: 100px;
+  }
 `;

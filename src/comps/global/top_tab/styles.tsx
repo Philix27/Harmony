@@ -1,7 +1,6 @@
-@import "../../styles/variables";
-@import "../../styles/screensize";
+import styled from "styled-components";
 
-.navbar {
+export const NavWrapper = styled.div`
   background-color: $background1;
   width: 100%;
   // height: 40px;
@@ -57,4 +56,4 @@
       }
     }
   }
-}
+`;

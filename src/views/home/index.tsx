@@ -1,17 +1,16 @@
 import React from "react";
-import styles from "./home.module.scss";
 import { MdExtension, MdGroup, MdNotes } from "react-icons/md";
 import { FaTasks } from "react-icons/fa";
 import { BsChatFill, BsClipboard } from "react-icons/bs";
-// import { invoke } from "@tauri-apps/api";
+import { HomeStyles } from "./styles";
 
-export default function Home() {
+export function Home() {
   return (
-    <div className={styles.home}>
-      <div className={styles.inner_container}>
+    <HomeStyles>
+      <div className={"inner_container"}>
         <h3>Apps</h3>
         <input type="text" placeholder="Search for an app" />
-        <div className={styles.icon_tray}>
+        <div className={"icon_tray"}>
           {iconItem("Chat", <BsChatFill />)}
           {iconItem("Group", <MdGroup />)}
           {iconItem("Notification", <MdExtension />)}
@@ -21,7 +20,7 @@ export default function Home() {
           {iconItem("Wiki", <MdNotes />)}
         </div>
       </div>
-    </div>
+    </HomeStyles>
   );
 }
 

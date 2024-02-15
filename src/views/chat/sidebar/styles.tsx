@@ -1,7 +1,6 @@
-@import "../../../styles/screensize";
-@import "../../../styles/variables";
+import styled from "styled-components";
 
-.container {
+export const Wrapper = styled.div`
   min-height: 100%;
   width: 400px;
   background-color: $background1;
@@ -56,4 +55,4 @@
       margin-top: 20px;
     }
   }
-}
+`;

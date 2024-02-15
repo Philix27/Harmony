@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles.module.scss";
+
 import { useAppDispatch, useAppSelector } from "hooks";
 import { FaHashtag } from "react-icons/fa";
 import { styled } from "styled-components";
@@ -9,7 +9,7 @@ export default function Channels() {
   const { dispatch, actions } = useAppDispatch();
 
   return (
-    <div className={styles.contents}>
+    <div className={"contents"}>
       <Tile>
         <FaHashtag />
         <p>General</p>

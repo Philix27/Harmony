@@ -1,19 +1,15 @@
 import React from "react";
-import NavBar from "comps/top_tab";
-import styles from "styles/home.module.scss";
+import "styles/index";
 import { useAppSelector } from "hooks";
-// import { get_active_tab } from "comps/top_tab/linkItem";
-import SidebarAccounts from "comps/global/sidebar";
-import { get_active_tab } from "comps/top_tab/array";
+import { SidebarAccounts, get_active_tab, NavBar } from "comps";
 
 export default function Index() {
   const activeTab = useAppSelector((s) => s.tabs);
   return (
-    <div className={styles.container}>
+    <div>
       <NavBar />
       <SidebarAccounts />
       {get_active_tab(activeTab.name)}
-      {/* <Sidebar /> */}
     </div>
   );
 }

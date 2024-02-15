@@ -1,5 +1,4 @@
 import React, { useLayoutEffect, useCallback } from "react";
-import styles from "./canvas.module.scss";
 import ReactFlow, {
   useNodesState,
   useEdgesState,
@@ -19,7 +18,7 @@ const initialNodes = [
   { id: "2", position: { x: 0, y: 100 }, data: { label: "2" } },
 ];
 const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
-export default function CanvasFrame() {
+export function CanvasFrame() {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 

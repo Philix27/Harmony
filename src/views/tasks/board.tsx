@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
-import { styled } from "styled-components";
 
 export default function KanbanBoard() {
   const [completed, setCompleted] = useState([]);

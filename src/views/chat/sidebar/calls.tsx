@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./styles.module.scss";
+
 import { useAppDispatch, useAppSelector } from "hooks";
 import { FaHashtag, FaPhone, FaVideo } from "react-icons/fa";
 import { styled } from "styled-components";
@@ -10,7 +10,7 @@ export default function ChatCallsList() {
   const { dispatch, actions } = useAppDispatch();
 
   return (
-    <div className={styles.contents}>
+    <div className={"contents"}>
       <h5>Call history</h5>
       <Tile>
         <div>

@@ -1,21 +1,6 @@
-@import "../../styles/screensize";
-@import "../../styles/variables";
+import styled from "styled-components";
 
-@mixin sideIcons {
-  padding: 10px 10px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  svg {
-    font-size: 22px;
-    text-align: center;
-    align-items: center;
-  }
-}
-
-.sidebar {
+export const StylesWrapper = styled.div`
   height: calc(100vh - 30px);
   background-color: $background1;
   // background-color: var(--backgroundColor2);
@@ -52,7 +37,17 @@
   }
 
   .sidebar_start_list_item {
-    @include sideIcons;
+    padding: 10px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    svg {
+      font-size: 22px;
+      text-align: center;
+      align-items: center;
+    }
     :hover {
       background-color: #fff;
     }
@@ -62,7 +57,17 @@
     // background-color: var(--backgroundColor1);
     border-bottom: solid 0.5px #fff;
     color: var(--fontColor);
-    @include sideIcons;
+    padding: 10px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    svg {
+      font-size: 22px;
+      text-align: center;
+      align-items: center;
+    }
   }
   .bottom_sidebar_start_list {
   }
@@ -125,4 +130,4 @@
   .sidebar_end {
     display: none;
   }
-}
+`;

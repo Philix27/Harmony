@@ -1,18 +1,18 @@
-import styles from "./styles.module.scss";
 import { useAppDispatch, useAppSelector } from "hooks";
 import TopBar from "./topBar";
 import Channels from "./channels";
-import { ChatTabsType } from "./types";
 import ChatCallsList from "./calls";
+import { ChatTabsType } from "types";
+import { Wrapper } from "./styles";
 
 export default function SideBar() {
   const selector = useAppSelector((s) => s.chat);
   const { dispatch, actions } = useAppDispatch();
   return (
-    <div className={styles.container}>
+    <Wrapper>
       <TopBar />
       {getView(selector.active_tab!)}
-    </div>
+    </Wrapper>
   );
 }
 

@@ -1,12 +1,14 @@
-import styles from "./sidebar.module.scss";
 import { LinkItem } from "./linkItem";
 import { GroupItemList } from "./data";
+import { StylesWrapper } from "./styles";
+
+export * from "./linkItem";
 
 export function SidebarAccounts() {
   return (
-    <div className={styles.sidebar}>
-      <div className={styles.sidebar_start}>
-        <ul className={styles.sidebar_start_list}>
+    <StylesWrapper>
+      <div className={"sidebar_start"}>
+        <ul className={"sidebar_start_list"}>
           {GroupItemList.map((v, i) =>
             LinkItem({
               id: i,
@@ -16,8 +18,8 @@ export function SidebarAccounts() {
             })
           )}
         </ul>
-        <div className={styles.bottom_sidebar_start_list}></div>
+        <div className={"bottom_sidebar_start_list"}></div>
       </div>
-    </div>
+    </StylesWrapper>
   );
 }

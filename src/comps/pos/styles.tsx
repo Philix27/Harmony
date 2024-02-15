@@ -1,13 +1,12 @@
-@import "../../styles/screensize";
-@import "../../styles/variables";
+import styled from "styled-components";
 
-.goal {
-  background-color: var(--primaryColor);
+export const CartWrapper = styled.div`
+  background-color: ${(props) => props.theme.colors.primary};
   margin-bottom: 10px;
   padding: 10px 10px;
   border-radius: 5px;
   &:hover {
-    background-color: var(--backgroundColor2);
+    background-color: ${(props) => props.theme.colors.backgroundLight};
   }
   .title {
     display: flex;
@@ -21,4 +20,4 @@
       font-size: 10px;
     }
   }
-}
+`;

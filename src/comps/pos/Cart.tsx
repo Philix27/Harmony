@@ -2,10 +2,11 @@ import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { FaShoppingCart } from "react-icons/fa";
 import { GrAddCircle, GrSubtractCircle } from "react-icons/gr";
+import { CartWrapper } from "./styles";
 
 export function Cart() {
   return (
-    <div className="cart">
+    <CartWrapper>
       <div className="topSection">
         <div className="topCart">
           <FaShoppingCart className="icon" />
@@ -293,6 +294,6 @@ export function Cart() {
 
         <h3>Checkout</h3>
       </div>
-    </div>
+    </CartWrapper>
   );
 }

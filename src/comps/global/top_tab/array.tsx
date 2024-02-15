@@ -1,8 +1,8 @@
 import { MdNotes, MdOtherHouses, MdTask } from "react-icons/md";
-import Home from "views/home/home";
+import Home from "views/home";
 import TasksSection from "views/tasks";
-import GoalsView from "views/goals/goals";
-import CanvasFrame from "views/canvas/canvas";
+import GoalsView from "views/goals";
+import CanvasFrame from "views/canvas";
 import { ILinkItem, TabsType } from "./types";
 import ChatApp from "views/chat";
 import NotesView from "views/notes";

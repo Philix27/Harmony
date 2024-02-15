@@ -1,22 +1,21 @@
 import Link from "next/link";
-import styles from "./navbar.module.scss";
 import { useAppDispatch, useAppSelector } from "hooks";
 import { TabItems } from "./array";
+import { NavWrapper } from "./styles";
 
-
-export default function NavBar() {
+export function NavBar() {
   const app_store = useAppSelector((state) => state.tabs);
   const { dispatch, actions } = useAppDispatch();
 
   return (
-    <div className={styles.navbar}>
-      <label className={styles.brand}>
-        <Link href="/" className={styles.brand}>
+    <NavWrapper>
+      <label className={"brand"}>
+        <Link href="/" className={"brand"}>
           KOLAB
         </Link>
       </label>
-      <div className={styles.tabs_container}>
-        <div className={styles.tab_box}>
+      <div className={"tabs_container"}>
+        <div className={"tab_box"}>
           {TabItems.map((v, i) => (
             <TabItem
               key={i}
@@ -34,7 +33,7 @@ export default function NavBar() {
           ))}
         </div>
       </div>
-    </div>
+    </NavWrapper>
   );
 }
 function TabItem(props: {
@@ -44,7 +43,7 @@ function TabItem(props: {
 }) {
   return (
     <div
-      className={`${styles.tab_name} ${props.isActive ? styles.active : ""}`}
+      className={`${"tab_name"} ${props.isActive ? "active" : ""}`}
       onClick={props.onClick}
     >
       {props.title}
